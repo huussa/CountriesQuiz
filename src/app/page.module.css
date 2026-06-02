@@ -12,3 +12,13 @@
   font-weight: bold;
   background-color: #121212;
 }
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: url("./images/dark-world-map.png") no-repeat;
+  background-size: 80% 70%;
+  background-position: 50% 20%;
+}
