@@ -1,16 +1,23 @@
-
-
-
-function QuestionCard({ card, flag, ...options }) {
+function QuestionCard({ card, flag, options }) {
+  if (!flag || !options?.length) return <p>Reload the page...</p>;
+  const countryNames = new Intl.DisplayNames(["ar"], {
+    type: "region",
+  });
+  const specialNames = {
+    HK: "هونغ كونغ",
+    MM: "بورما",
+    TL: "تيمور",
+    CD: "جمهورية الكونقو",
+  };
   return (
     <div className={card}>
       <h2>what is the name of this country?</h2>
       <img src={flag} alt="country flag" />
-      
-      <button>{options[0]}</button>
-      <button>{options[1]}</button>
-      <button>{options[2]}</button>
-      <button>{options[3]}</button>
+      {options.map((opt) => (
+        <button key={opt.code}>
+          {specialNames[opt.code] || countryNames.of(opt.code) || opt.name}
+        </button>
+      ))}
     </div>
   );
 }
