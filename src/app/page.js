@@ -28,7 +28,7 @@ function App() {
     const options = shuffle([correct, ...wrong]);
 
     setQuestion({
-      flag: correct.flags.png,
+      flag: correct.flags.png || correct.flags.svg,
       correct: correct.name.common,
       options: options.map((c) => ({
         name: c.name.common,
@@ -58,7 +58,7 @@ function App() {
     fetchCountries();
   }, []);
 
-  if (isLoading) return <p>Loading...</p>;
+  if (isLoading || !question) return <p>Loading...</p>;
 
   return (
     <>

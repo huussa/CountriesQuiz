@@ -1,5 +1,4 @@
 function QuestionCard({ card, flag, options }) {
-  if (!flag || !options?.length) return <p>Reload the page...</p>;
   const countryNames = new Intl.DisplayNames(["ar"], {
     type: "region",
   });
