@@ -7,7 +7,7 @@ import countriesData from "./data/countries-data";
 
 
 
-function Home() {
+function App() {
   const countries = countriesData();
   return (
     <>
@@ -19,4 +19,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default App;
