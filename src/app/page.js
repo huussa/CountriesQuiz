@@ -18,13 +18,13 @@ function shuffle(array) {
 
 function App() {
   const [countries, setCountries] = useState([]);
+  const [currentIndex, setCurrentIndex] = useState(0);
   const [question, setQuestion] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
 
-  function generateQuestion(data) {
-    const correct = data[Math.floor(Math.random() * data.length)];
+  function generateQuestion(correct) {
 
-    const wrong = getRandomItems(data, 3, correct.name.common);
+    const wrong = getRandomItems(countries, 3, correct.name.common);
 
     const options = shuffle([correct, ...wrong]);
 
@@ -37,6 +37,7 @@ function App() {
       })),
     });
   }
+  
 
   useEffect(() => {
     const fetchCountries = async () => {
@@ -46,9 +47,11 @@ function App() {
         );
 
         const data = await res.json();
+        const shuffledCountries = shuffle(data);
 
-        setCountries(data);
-        generateQuestion(data);
+        setCountries(shuffledCountries);
+        // generateQuestion(data);
+
       } catch (error) {
         console.error("Error fetching countries:", error);
       } finally {
@@ -57,22 +60,36 @@ function App() {
     };
 
     fetchCountries();
-  }, []);
+  }, []); // [countries, currentIndex]
+
+  useEffect(() => {
+    if (!countries.length) return;
+
+    generateQuestion(countries[currentIndex]);
+  }, [countries, currentIndex]);
+
+  function handleNextQuestion() {
+    if (currentIndex < countries.length - 1) {
+      setCurrentIndex((prev) => prev + 1);
+    } else {
+      alert("No more questions available.");
+    }
+  }
 
   if (isLoading || !question) return <p>Loading...</p>;
 
   return (
     <>
-      <Header header={styles.header} score={styles.score} />
+      <Header />
 
       <div className={styles.page}>
         <>
         <QuestionCard
-          card={styles.card}
           flag={question?.flag}
+          number={currentIndex + 1}
           options={question?.options || []}
         />
-        <NextQuestionButton nextQuestionButton={styles.nextQuestionButton} />
+        <NextQuestionButton nextQuestionButton={styles.nextQuestionButton} onClick={handleNextQuestion} />
         </>
       </div>
     </>
