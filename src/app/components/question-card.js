@@ -1,6 +1,14 @@
 import styles from "../page.module.css";
 
-function QuestionCard({flag, options, number, selectedAnswer, onSelectAnswer}) {
+function QuestionCard({
+  flag,
+  options,
+  number,
+  correctAnswer,
+  selectedAnswer,
+  isAnswered,
+  onAnswer,
+}) {
   const countryNames = new Intl.DisplayNames(["ar"], {
     type: "region",
   });
@@ -17,8 +25,16 @@ function QuestionCard({flag, options, number, selectedAnswer, onSelectAnswer}) {
       {options.map((opt) => (
         <button
           key={opt.code}
-          onClick={() => onSelectAnswer(opt)}
-          className={selectedAnswer?.code === opt.code ? styles.selected : ""}
+          onClick={() => onAnswer(opt)}
+          className={
+            isAnswered
+              ? opt.name === correctAnswer
+                ? styles.true
+                : opt.name === selectedAnswer.name
+                  ? styles.false
+                  : ""
+              : ""
+          }
         >
           {specialNames[opt.code] || countryNames.of(opt.code) || opt.name}
         </button>

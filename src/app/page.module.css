@@ -80,8 +80,11 @@
 .card button:active {
   background-color: #555;
 }
-.selected {
-  background-color: #af7b19 !important;
+.true {
+  background-color: #107919 !important;
+}
+.false {
+  background-color: #7b1919 !important;
 }
 .nextQuestionButton {
   margin-top: 1rem;

@@ -22,9 +22,10 @@ function App() {
   const [question, setQuestion] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
+  const [isAnswered, setIsAnswered] = useState(false);
+  const [score, setScore] = useState(0);
 
   function generateQuestion(correct) {
-
     const wrong = getRandomItems(countries, 3, correct.name.common);
 
     const options = shuffle([correct, ...wrong]);
@@ -38,7 +39,6 @@ function App() {
       })),
     });
   }
-  
 
   useEffect(() => {
     const fetchCountries = async () => {
@@ -52,7 +52,6 @@ function App() {
 
         setCountries(shuffledCountries);
         // generateQuestion(data);
-
       } catch (error) {
         console.error("Error fetching countries:", error);
       } finally {
@@ -76,27 +75,40 @@ function App() {
     if (currentIndex < countries.length - 1) {
       setCurrentIndex((prev) => prev + 1);
       setSelectedAnswer(null);
+      setIsAnswered(false);
     } else {
       alert("No more questions available.");
     }
   }
-
+  function handleSelectAnswer(option) {
+    if (isAnswered) return;
+    setSelectedAnswer(option);
+    setIsAnswered(true);
+    if (option.name === question.correct) {
+      setScore((prev) => prev + 1);
+    }
+  }
   if (isLoading || !question) return <p>Loading...</p>;
 
   return (
     <>
-      <Header bestScore={100} />
+      <Header score={score} />
 
       <div className={styles.page}>
         <>
-        <QuestionCard
-          flag={question?.flag}
-          number={currentIndex + 1}
-          options={question?.options || []}
-          selectedAnswer={selectedAnswer}
-          onSelectAnswer={setSelectedAnswer}
-        />
-        <NextQuestionButton nextQuestionButton={styles.nextQuestionButton} onClick={handleNextQuestion} />
+          <QuestionCard
+            flag={question?.flag}
+            number={currentIndex + 1}
+            options={question?.options || []}
+            correctAnswer={question?.correct}
+            selectedAnswer={selectedAnswer}
+            isAnswered={isAnswered}
+            onAnswer={handleSelectAnswer}
+          />
+          <NextQuestionButton
+            nextQuestionButton={styles.nextQuestionButton}
+            onClick={handleNextQuestion}
+          />
         </>
       </div>
     </>
