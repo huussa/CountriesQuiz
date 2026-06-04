@@ -21,6 +21,7 @@ function App() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [question, setQuestion] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [selectedAnswer, setSelectedAnswer] = useState(null);
 
   function generateQuestion(correct) {
 
@@ -69,8 +70,12 @@ function App() {
   }, [countries, currentIndex]);
 
   function handleNextQuestion() {
+    if (!selectedAnswer) {
+      return;
+    }
     if (currentIndex < countries.length - 1) {
       setCurrentIndex((prev) => prev + 1);
+      setSelectedAnswer(null);
     } else {
       alert("No more questions available.");
     }
@@ -88,6 +93,8 @@ function App() {
           flag={question?.flag}
           number={currentIndex + 1}
           options={question?.options || []}
+          selectedAnswer={selectedAnswer}
+          onSelectAnswer={setSelectedAnswer}
         />
         <NextQuestionButton nextQuestionButton={styles.nextQuestionButton} onClick={handleNextQuestion} />
         </>

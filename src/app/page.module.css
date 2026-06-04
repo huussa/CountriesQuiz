@@ -80,6 +80,9 @@
 .card button:active {
   background-color: #555;
 }
+.selected {
+  background-color: #af7b19 !important;
+}
 .nextQuestionButton {
   margin-top: 1rem;
   padding: 0.75rem 1.5rem;
