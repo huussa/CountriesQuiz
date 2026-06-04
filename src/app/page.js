@@ -3,6 +3,7 @@
 import styles from "./page.module.css";
 import Header from "./components/header";
 import QuestionCard from "./components/question-card";
+import NextQuestionButton from "./components/next-question-button";
 import { useEffect, useState } from "react";
 
 function getRandomItems(array, count, exclude = null) {
@@ -65,11 +66,14 @@ function App() {
       <Header header={styles.header} score={styles.score} />
 
       <div className={styles.page}>
+        <>
         <QuestionCard
           card={styles.card}
           flag={question?.flag}
           options={question?.options || []}
         />
+        <NextQuestionButton nextQuestionButton={styles.nextQuestionButton} />
+        </>
       </div>
     </>
   );
