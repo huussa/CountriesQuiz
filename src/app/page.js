@@ -3,6 +3,7 @@
 import styles from "./page.module.css";
 import Header from "./components/header";
 import QuestionCard from "./components/question-card";
+import NextQuestionButton from "./components/next-question-button";
 import { useEffect, useState } from "react";
 
 function getRandomItems(array, count, exclude = null) {
@@ -17,13 +18,15 @@ function shuffle(array) {
 
 function App() {
   const [countries, setCountries] = useState([]);
+  const [currentIndex, setCurrentIndex] = useState(0);
   const [question, setQuestion] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [selectedAnswer, setSelectedAnswer] = useState(null);
+  const [isAnswered, setIsAnswered] = useState(false);
+  const [score, setScore] = useState(0);
 
-  function generateQuestion(data) {
-    const correct = data[Math.floor(Math.random() * data.length)];
-
-    const wrong = getRandomItems(data, 3, correct.name.common);
+  function generateQuestion(correct) {
+    const wrong = getRandomItems(countries, 3, correct.name.common);
 
     const options = shuffle([correct, ...wrong]);
 
@@ -45,9 +48,10 @@ function App() {
         );
 
         const data = await res.json();
+        const shuffledCountries = shuffle(data);
 
-        setCountries(data);
-        generateQuestion(data);
+        setCountries(shuffledCountries);
+        // generateQuestion(data);
       } catch (error) {
         console.error("Error fetching countries:", error);
       } finally {
@@ -58,18 +62,54 @@ function App() {
     fetchCountries();
   }, []);
 
+  useEffect(() => {
+    if (!countries.length) return;
+
+    generateQuestion(countries[currentIndex]);
+  }, [countries, currentIndex]);
+
+  function handleNextQuestion() {
+    if (!selectedAnswer) {
+      return;
+    }
+    if (currentIndex < countries.length - 1) {
+      setCurrentIndex((prev) => prev + 1);
+      setSelectedAnswer(null);
+      setIsAnswered(false);
+    } else {
+      alert("No more questions available.");
+    }
+  }
+  function handleSelectAnswer(option) {
+    if (isAnswered) return;
+    setSelectedAnswer(option);
+    setIsAnswered(true);
+    if (option.name === question.correct) {
+      setScore((prev) => prev + 1);
+    }
+  }
   if (isLoading || !question) return <p>Loading...</p>;
 
   return (
     <>
-      <Header header={styles.header} score={styles.score} />
+      <Header score={score} />
 
       <div className={styles.page}>
-        <QuestionCard
-          card={styles.card}
-          flag={question?.flag}
-          options={question?.options || []}
-        />
+        <>
+          <QuestionCard
+            flag={question?.flag}
+            number={currentIndex + 1}
+            options={question?.options || []}
+            correctAnswer={question?.correct}
+            selectedAnswer={selectedAnswer}
+            isAnswered={isAnswered}
+            onAnswer={handleSelectAnswer}
+          />
+          <NextQuestionButton
+            nextQuestionButton={styles.nextQuestionButton}
+            onClick={handleNextQuestion}
+          />
+        </>
       </div>
     </>
   );
