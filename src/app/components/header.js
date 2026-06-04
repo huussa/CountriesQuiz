@@ -1,11 +1,11 @@
 import styles from "../page.module.css";
 
-function Header() {
+function Header({bestScore}) {
   return (
     <header className={styles.header}>
       <h1>Countries Quiz</h1>
 
-      <div><p className={styles.score}>Best Score: 0</p></div>
+      <div><p className={styles.score}>Best Score: {bestScore}</p></div>
     </header>
   );
 }

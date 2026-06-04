@@ -61,7 +61,7 @@ function App() {
     };
 
     fetchCountries();
-  }, []); // [countries, currentIndex]
+  }, []);
 
   useEffect(() => {
     if (!countries.length) return;
@@ -85,7 +85,7 @@ function App() {
 
   return (
     <>
-      <Header />
+      <Header bestScore={100} />
 
       <div className={styles.page}>
         <>
