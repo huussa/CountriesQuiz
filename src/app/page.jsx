@@ -8,12 +8,10 @@ export default function Home() {
     <div className={styles.menu}>
       <div className={styles.menuContainer}>
         <h1 className={styles.title}>🌍 Countries Quiz</h1>
-        <p className={styles.subtitle}>
-          Test your knowledge about countries around the world!
-        </p>
-
+        <p className={styles.subtitle}>Test your knowledge about countries around the world!</p>
+        
         <div className={styles.menuButtons}>
-          <Link href="/allCountriesGame" className={styles.menuBtn}>
+          <Link href="/AllCountiresGame" className={styles.menuBtn}>
             <span>🚀 Start Game</span>
             <span className={styles.btnSubtext}>All Countries</span>
           </Link>
