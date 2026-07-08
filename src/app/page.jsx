@@ -11,7 +11,7 @@ export default function Home() {
         <p className={styles.subtitle}>Test your knowledge about countries around the world!</p>
         
         <div className={styles.menuButtons}>
-          <Link href="/AllCountiresGame" className={styles.menuBtn}>
+          <Link href="/CountiresGame" className={styles.menuBtn}>
             <span>🚀 Start Game</span>
             <span className={styles.btnSubtext}>All Countries</span>
           </Link>
