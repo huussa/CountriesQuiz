@@ -1,0 +1,104 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5rem;
+  padding: 1rem 10%;
+  background-color: #1f1f1f;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+.header .score {
+  padding: 0.5rem 1rem;
+  border-radius: 15px;
+  font-weight: bold;
+  background-color: #121212;
+}
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: url("/images/dark-world-map.png") repeat;
+  background-position: 50% 20%;
+  overflow: hidden;
+
+  background-size: cover;
+
+  animation: moveBg 20s linear infinite;
+}
+
+@keyframes moveBg {
+  0% {
+    background-position: -50px 0;
+  }
+
+  100% {
+    background-position: -1000px 0;
+  }
+}
+
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  width: 400px;
+  padding: 2rem;
+  border-radius: 15px;
+  background-color: #1f1f1f;
+}
+.card img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+}
+.card h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.25rem;
+}
+.card button {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 0.75rem;
+  border: none;
+  border-radius: 10px;
+  background-color: #121212;
+  color: #fff;
+  font-size: 1.5rem; 
+  cursor: pointer;
+}
+.card button:hover {
+  background-color: #333;
+}
+.card button:active {
+  background-color: #555;
+}
+.true {
+  background-color: #107919 !important;
+}
+.false {
+  background-color: #7b1919 !important;
+}
+.nextQuestionButton {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 10px;
+  background-color: #121212;
+  color: #fff;
+  font-size: 1.25rem; 
+  cursor: pointer;
+}
+.nextQuestionButton:hover {
+  background-color: #333;
+}
+.nextQuestionButton:active {
+  background-color: #555;
+}
