@@ -1,0 +1,613 @@
+[
+  {
+    "id": 1,
+    "name": "Albania",
+    "iso2": "AL",
+    "region": "Europe",
+    "translations": {
+      "ar": "ألبانيا"
+    },
+    "img": {
+      "src": "https://flagcdn.com/al.svg",
+      "alt": "Albania"
+    }
+  },
+  {
+    "id": 2,
+    "name": "Andorra",
+    "iso2": "AD",
+    "region": "Europe",
+    "translations": {
+      "ar": "أندورا"
+    },
+    "img": {
+      "src": "https://flagcdn.com/ad.svg",
+      "alt": "Andorra"
+    }
+  },
+  {
+    "id": 3,
+    "name": "Austria",
+    "iso2": "AT",
+    "region": "Europe",
+    "translations": {
+      "ar": "النمسا"
+    },
+    "img": {
+      "src": "https://flagcdn.com/at.svg",
+      "alt": "Austria"
+    }
+  },
+  {
+    "id": 4,
+    "name": "Belarus",
+    "iso2": "BY",
+    "region": "Europe",
+    "translations": {
+      "ar": "بيلاروسيا"
+    },
+    "img": {
+      "src": "https://flagcdn.com/by.svg",
+      "alt": "Belarus"
+    }
+  },
+  {
+    "id": 5,
+    "name": "Belgium",
+    "iso2": "BE",
+    "region": "Europe",
+    "translations": {
+      "ar": "بلجيكا"
+    },
+    "img": {
+      "src": "https://flagcdn.com/be.svg",
+      "alt": "Belgium"
+    }
+  },
+  {
+    "id": 6,
+    "name": "Bosnia and Herzegovina",
+    "iso2": "BA",
+    "region": "Europe",
+    "translations": {
+      "ar": "البوسنة والهرسك"
+    },
+    "img": {
+      "src": "https://flagcdn.com/ba.svg",
+      "alt": "Bosnia and Herzegovina"
+    }
+  },
+  {
+    "id": 7,
+    "name": "Bulgaria",
+    "iso2": "BG",
+    "region": "Europe",
+    "translations": {
+      "ar": "بلغاريا"
+    },
+    "img": {
+      "src": "https://flagcdn.com/bg.svg",
+      "alt": "Bulgaria"
+    }
+  },
+  {
+    "id": 8,
+    "name": "Croatia",
+    "iso2": "HR",
+    "region": "Europe",
+    "translations": {
+      "ar": "كرواتيا"
+    },
+    "img": {
+      "src": "https://flagcdn.com/hr.svg",
+      "alt": "Croatia"
+    }
+  },
+  {
+    "id": 9,
+    "name": "Cyprus",
+    "iso2": "CY",
+    "region": "Europe",
+    "translations": {
+      "ar": "قبرص"
+    },
+    "img": {
+      "src": "https://flagcdn.com/cy.svg",
+      "alt": "Cyprus"
+    }
+  },
+  {
+    "id": 10,
+    "name": "Czech Republic",
+    "iso2": "CZ",
+    "region": "Europe",
+    "translations": {
+      "ar": "الجمهورية التشيكية"
+    },
+    "img": {
+      "src": "https://flagcdn.com/cz.svg",
+      "alt": "Czech Republic"
+    }
+  },
+  {
+    "id": 11,
+    "name": "Denmark",
+    "iso2": "DK",
+    "region": "Europe",
+    "translations": {
+      "ar": "الدنمارك"
+    },
+    "img": {
+      "src": "https://flagcdn.com/dk.svg",
+      "alt": "Denmark"
+    }
+  },
+  {
+    "id": 12,
+    "name": "Estonia",
+    "iso2": "EE",
+    "region": "Europe",
+    "translations": {
+      "ar": "إستونيا"
+    },
+    "img": {
+      "src": "https://flagcdn.com/ee.svg",
+      "alt": "Estonia"
+    }
+  },
+  {
+    "id": 13,
+    "name": "Faroe Islands",
+    "iso2": "FO",
+    "region": "Europe",
+    "translations": {
+      "ar": "جزر فارو"
+    },
+    "img": {
+      "src": "https://flagcdn.com/fo.svg",
+      "alt": "Faroe Islands"
+    }
+  },
+  {
+    "id": 14,
+    "name": "Finland",
+    "iso2": "FI",
+    "region": "Europe",
+    "translations": {
+      "ar": "فنلندا"
+    },
+    "img": {
+      "src": "https://flagcdn.com/fi.svg",
+      "alt": "Finland"
+    }
+  },
+  {
+    "id": 15,
+    "name": "France",
+    "iso2": "FR",
+    "region": "Europe",
+    "translations": {
+      "ar": "فرنسا"
+    },
+    "img": {
+      "src": "https://flagcdn.com/fr.svg",
+      "alt": "France"
+    }
+  },
+  {
+    "id": 16,
+    "name": "Germany",
+    "iso2": "DE",
+    "region": "Europe",
+    "translations": {
+      "ar": "ألمانيا"
+    },
+    "img": {
+      "src": "https://flagcdn.com/de.svg",
+      "alt": "Germany"
+    }
+  },
+  {
+    "id": 17,
+    "name": "Greece",
+    "iso2": "GR",
+    "region": "Europe",
+    "translations": {
+      "ar": "اليونان"
+    },
+    "img": {
+      "src": "https://flagcdn.com/gr.svg",
+      "alt": "Greece"
+    }
+  },
+  {
+    "id": 18,
+    "name": "Hungary",
+    "iso2": "HU",
+    "region": "Europe",
+    "translations": {
+      "ar": "هنغاريا"
+    },
+    "img": {
+      "src": "https://flagcdn.com/hu.svg",
+      "alt": "Hungary"
+    }
+  },
+  {
+    "id": 19,
+    "name": "Iceland",
+    "iso2": "IS",
+    "region": "Europe",
+    "translations": {
+      "ar": "أيسلندا"
+    },
+    "img": {
+      "src": "https://flagcdn.com/is.svg",
+      "alt": "Iceland"
+    }
+  },
+  {
+    "id": 20,
+    "name": "Ireland",
+    "iso2": "IE",
+    "region": "Europe",
+    "translations": {
+      "ar": "أيرلندا"
+    },
+    "img": {
+      "src": "https://flagcdn.com/ie.svg",
+      "alt": "Ireland"
+    }
+  },
+  {
+    "id": 21,
+    "name": "Italy",
+    "iso2": "IT",
+    "region": "Europe",
+    "translations": {
+      "ar": "إيطاليا"
+    },
+    "img": {
+      "src": "https://flagcdn.com/it.svg",
+      "alt": "Italy"
+    }
+  },
+  {
+    "id": 22,
+    "name": "Kosovo",
+    "iso2": "XK",
+    "region": "Europe",
+    "translations": {
+      "ar": "كوسوفو"
+    },
+    "img": {
+      "src": "https://flagcdn.com/xk.svg",
+      "alt": "Kosovo"
+    }
+  },
+  {
+    "id": 23,
+    "name": "Latvia",
+    "iso2": "LV",
+    "region": "Europe",
+    "translations": {
+      "ar": "لاتفيا"
+    },
+    "img": {
+      "src": "https://flagcdn.com/lv.svg",
+      "alt": "Latvia"
+    }
+  },
+  {
+    "id": 24,
+    "name": "Liechtenstein",
+    "iso2": "LI",
+    "region": "Europe",
+    "translations": {
+      "ar": "ليختنشتاين"
+    },
+    "img": {
+      "src": "https://flagcdn.com/li.svg",
+      "alt": "Liechtenstein"
+    }
+  },
+  {
+    "id": 25,
+    "name": "Lithuania",
+    "iso2": "LT",
+    "region": "Europe",
+    "translations": {
+      "ar": "ليتوانيا"
+    },
+    "img": {
+      "src": "https://flagcdn.com/lt.svg",
+      "alt": "Lithuania"
+    }
+  },
+  {
+    "id": 26,
+    "name": "Luxembourg",
+    "iso2": "LU",
+    "region": "Europe",
+    "translations": {
+      "ar": "لوكسمبورغ"
+    },
+    "img": {
+      "src": "https://flagcdn.com/lu.svg",
+      "alt": "Luxembourg"
+    }
+  },
+  {
+    "id": 27,
+    "name": "Malta",
+    "iso2": "MT",
+    "region": "Europe",
+    "translations": {
+      "ar": "مالطا"
+    },
+    "img": {
+      "src": "https://flagcdn.com/mt.svg",
+      "alt": "Malta"
+    }
+  },
+  {
+    "id": 28,
+    "name": "Moldova",
+    "iso2": "MD",
+    "region": "Europe",
+    "translations": {
+      "ar": "مولدوفا"
+    },
+    "img": {
+      "src": "https://flagcdn.com/md.svg",
+      "alt": "Moldova"
+    }
+  },
+  {
+    "id": 29,
+    "name": "Monaco",
+    "iso2": "MC",
+    "region": "Europe",
+    "translations": {
+      "ar": "موناكو"
+    },
+    "img": {
+      "src": "https://flagcdn.com/mc.svg",
+      "alt": "Monaco"
+    }
+  },
+  {
+    "id": 30,
+    "name": "Montenegro",
+    "iso2": "ME",
+    "region": "Europe",
+    "translations": {
+      "ar": "الجبل الأسود"
+    },
+    "img": {
+      "src": "https://flagcdn.com/me.svg",
+      "alt": "Montenegro"
+    }
+  },
+  {
+    "id": 31,
+    "name": "Netherlands",
+    "iso2": "NL",
+    "region": "Europe",
+    "translations": {
+      "ar": "هولندا"
+    },
+    "img": {
+      "src": "https://flagcdn.com/nl.svg",
+      "alt": "Netherlands"
+    }
+  },
+  {
+    "id": 32,
+    "name": "North Macedonia",
+    "iso2": "MK",
+    "region": "Europe",
+    "translations": {
+      "ar": "شمال مقدونيا"
+    },
+    "img": {
+      "src": "https://flagcdn.com/mk.svg",
+      "alt": "North Macedonia"
+    }
+  },
+  {
+    "id": 33,
+    "name": "Norway",
+    "iso2": "NO",
+    "region": "Europe",
+    "translations": {
+      "ar": "النرويج"
+    },
+    "img": {
+      "src": "https://flagcdn.com/no.svg",
+      "alt": "Norway"
+    }
+  },
+  {
+    "id": 34,
+    "name": "Poland",
+    "iso2": "PL",
+    "region": "Europe",
+    "translations": {
+      "ar": "بولندا"
+    },
+    "img": {
+      "src": "https://flagcdn.com/pl.svg",
+      "alt": "Poland"
+    }
+  },
+  {
+    "id": 35,
+    "name": "Portugal",
+    "iso2": "PT",
+    "region": "Europe",
+    "translations": {
+      "ar": "البرتغال"
+    },
+    "img": {
+      "src": "https://flagcdn.com/pt.svg",
+      "alt": "Portugal"
+    }
+  },
+  {
+    "id": 36,
+    "name": "Romania",
+    "iso2": "RO",
+    "region": "Europe",
+    "translations": {
+      "ar": "رومانيا"
+    },
+    "img": {
+      "src": "https://flagcdn.com/ro.svg",
+      "alt": "Romania"
+    }
+  },
+  {
+    "id": 37,
+    "name": "Russia",
+    "iso2": "RU",
+    "region": "Europe",
+    "translations": {
+      "ar": "روسيا"
+    },
+    "img": {
+      "src": "https://flagcdn.com/ru.svg",
+      "alt": "Russia"
+    }
+  },
+  {
+    "id": 38,
+    "name": "San Marino",
+    "iso2": "SM",
+    "region": "Europe",
+    "translations": {
+      "ar": "سان مارينو"
+    },
+    "img": {
+      "src": "https://flagcdn.com/sm.svg",
+      "alt": "San Marino"
+    }
+  },
+  {
+    "id": 39,
+    "name": "Serbia",
+    "iso2": "RS",
+    "region": "Europe",
+    "translations": {
+      "ar": "صربيا"
+    },
+    "img": {
+      "src": "https://flagcdn.com/rs.svg",
+      "alt": "Serbia"
+    }
+  },
+  {
+    "id": 40,
+    "name": "Slovakia",
+    "iso2": "SK",
+    "region": "Europe",
+    "translations": {
+      "ar": "سلوفاكيا"
+    },
+    "img": {
+      "src": "https://flagcdn.com/sk.svg",
+      "alt": "Slovakia"
+    }
+  },
+  {
+    "id": 41,
+    "name": "Slovenia",
+    "iso2": "SI",
+    "region": "Europe",
+    "translations": {
+      "ar": "سلوفينيا"
+    },
+    "img": {
+      "src": "https://flagcdn.com/si.svg",
+      "alt": "Slovenia"
+    }
+  },
+  {
+    "id": 42,
+    "name": "Spain",
+    "iso2": "ES",
+    "region": "Europe",
+    "translations": {
+      "ar": "إسبانيا"
+    },
+    "img": {
+      "src": "https://flagcdn.com/es.svg",
+      "alt": "Spain"
+    }
+  },
+  {
+    "id": 43,
+    "name": "Sweden",
+    "iso2": "SE",
+    "region": "Europe",
+    "translations": {
+      "ar": "السويد"
+    },
+    "img": {
+      "src": "https://flagcdn.com/se.svg",
+      "alt": "Sweden"
+    }
+  },
+  {
+    "id": 44,
+    "name": "Switzerland",
+    "iso2": "CH",
+    "region": "Europe",
+    "translations": {
+      "ar": "سويسرا"
+    },
+    "img": {
+      "src": "https://flagcdn.com/ch.svg",
+      "alt": "Switzerland"
+    }
+  },
+  {
+    "id": 45,
+    "name": "Ukraine",
+    "iso2": "UA",
+    "region": "Europe",
+    "translations": {
+      "ar": "أوكرانيا"
+    },
+    "img": {
+      "src": "https://flagcdn.com/ua.svg",
+      "alt": "Ukraine"
+    }
+  },
+  {
+    "id": 46,
+    "name": "United Kingdom",
+    "iso2": "GB",
+    "region": "Europe",
+    "translations": {
+      "ar": "المملكة المتحدة"
+    },
+    "img": {
+      "src": "https://flagcdn.com/gb.svg",
+      "alt": "United Kingdom"
+    }
+  },
+  {
+    "id": 47,
+    "name": "Vatican City State (Holy See)",
+    "iso2": "VA",
+    "region": "Europe",
+    "translations": {
+      "ar": "ولاية مدينة الفاتيكان (الكرسي الرسولي)"
+    },
+    "img": {
+      "src": "https://flagcdn.com/va.svg",
+      "alt": "Vatican City State (Holy See)"
+    }
+  }
+]

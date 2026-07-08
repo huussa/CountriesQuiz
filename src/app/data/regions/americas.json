@@ -1,0 +1,483 @@
+[
+  {
+    "id": 1,
+    "name": "Antigua and Barbuda",
+    "iso2": "AG",
+    "region": "Americas",
+    "translations": {
+      "ar": "أنتيغوا وبربودا"
+    },
+    "img": {
+      "src": "https://flagcdn.com/ag.svg",
+      "alt": "Antigua and Barbuda"
+    }
+  },
+  {
+    "id": 2,
+    "name": "Argentina",
+    "iso2": "AR",
+    "region": "Americas",
+    "translations": {
+      "ar": "الأرجنتين"
+    },
+    "img": {
+      "src": "https://flagcdn.com/ar.svg",
+      "alt": "Argentina"
+    }
+  },
+  {
+    "id": 3,
+    "name": "Barbados",
+    "iso2": "BB",
+    "region": "Americas",
+    "translations": {
+      "ar": "بربادوس"
+    },
+    "img": {
+      "src": "https://flagcdn.com/bb.svg",
+      "alt": "Barbados"
+    }
+  },
+  {
+    "id": 4,
+    "name": "Belize",
+    "iso2": "BZ",
+    "region": "Americas",
+    "translations": {
+      "ar": "بليز"
+    },
+    "img": {
+      "src": "https://flagcdn.com/bz.svg",
+      "alt": "Belize"
+    }
+  },
+  {
+    "id": 5,
+    "name": "Bolivia",
+    "iso2": "BO",
+    "region": "Americas",
+    "translations": {
+      "ar": "بوليفيا"
+    },
+    "img": {
+      "src": "https://flagcdn.com/bo.svg",
+      "alt": "Bolivia"
+    }
+  },
+  {
+    "id": 6,
+    "name": "Brazil",
+    "iso2": "BR",
+    "region": "Americas",
+    "translations": {
+      "ar": "البرازيل"
+    },
+    "img": {
+      "src": "https://flagcdn.com/br.svg",
+      "alt": "Brazil"
+    }
+  },
+  {
+    "id": 7,
+    "name": "Canada",
+    "iso2": "CA",
+    "region": "Americas",
+    "translations": {
+      "ar": "كندا"
+    },
+    "img": {
+      "src": "https://flagcdn.com/ca.svg",
+      "alt": "Canada"
+    }
+  },
+  {
+    "id": 8,
+    "name": "Chile",
+    "iso2": "CL",
+    "region": "Americas",
+    "translations": {
+      "ar": "تشيلي"
+    },
+    "img": {
+      "src": "https://flagcdn.com/cl.svg",
+      "alt": "Chile"
+    }
+  },
+  {
+    "id": 9,
+    "name": "Colombia",
+    "iso2": "CO",
+    "region": "Americas",
+    "translations": {
+      "ar": "كولومبيا"
+    },
+    "img": {
+      "src": "https://flagcdn.com/co.svg",
+      "alt": "Colombia"
+    }
+  },
+  {
+    "id": 10,
+    "name": "Costa Rica",
+    "iso2": "CR",
+    "region": "Americas",
+    "translations": {
+      "ar": "كوستاريكا"
+    },
+    "img": {
+      "src": "https://flagcdn.com/cr.svg",
+      "alt": "Costa Rica"
+    }
+  },
+  {
+    "id": 11,
+    "name": "Cuba",
+    "iso2": "CU",
+    "region": "Americas",
+    "translations": {
+      "ar": "كوبا"
+    },
+    "img": {
+      "src": "https://flagcdn.com/cu.svg",
+      "alt": "Cuba"
+    }
+  },
+  {
+    "id": 12,
+    "name": "Dominica",
+    "iso2": "DM",
+    "region": "Americas",
+    "translations": {
+      "ar": "دومينيكا"
+    },
+    "img": {
+      "src": "https://flagcdn.com/dm.svg",
+      "alt": "Dominica"
+    }
+  },
+  {
+    "id": 13,
+    "name": "Dominican Republic",
+    "iso2": "DO",
+    "region": "Americas",
+    "translations": {
+      "ar": "جمهورية الدومينيكان"
+    },
+    "img": {
+      "src": "https://flagcdn.com/do.svg",
+      "alt": "Dominican Republic"
+    }
+  },
+  {
+    "id": 14,
+    "name": "Ecuador",
+    "iso2": "EC",
+    "region": "Americas",
+    "translations": {
+      "ar": "الاكوادور"
+    },
+    "img": {
+      "src": "https://flagcdn.com/ec.svg",
+      "alt": "Ecuador"
+    }
+  },
+  {
+    "id": 15,
+    "name": "El Salvador",
+    "iso2": "SV",
+    "region": "Americas",
+    "translations": {
+      "ar": "السلفادور"
+    },
+    "img": {
+      "src": "https://flagcdn.com/sv.svg",
+      "alt": "El Salvador"
+    }
+  },
+  {
+    "id": 16,
+    "name": "Grenada",
+    "iso2": "GD",
+    "region": "Americas",
+    "translations": {
+      "ar": "غرينادا"
+    },
+    "img": {
+      "src": "https://flagcdn.com/gd.svg",
+      "alt": "Grenada"
+    }
+  },
+  {
+    "id": 17,
+    "name": "Guatemala",
+    "iso2": "GT",
+    "region": "Americas",
+    "translations": {
+      "ar": "غواتيمالا"
+    },
+    "img": {
+      "src": "https://flagcdn.com/gt.svg",
+      "alt": "Guatemala"
+    }
+  },
+  {
+    "id": 18,
+    "name": "Guyana",
+    "iso2": "GY",
+    "region": "Americas",
+    "translations": {
+      "ar": "غيانا"
+    },
+    "img": {
+      "src": "https://flagcdn.com/gy.svg",
+      "alt": "Guyana"
+    }
+  },
+  {
+    "id": 19,
+    "name": "Haiti",
+    "iso2": "HT",
+    "region": "Americas",
+    "translations": {
+      "ar": "هايتي"
+    },
+    "img": {
+      "src": "https://flagcdn.com/ht.svg",
+      "alt": "Haiti"
+    }
+  },
+  {
+    "id": 20,
+    "name": "Honduras",
+    "iso2": "HN",
+    "region": "Americas",
+    "translations": {
+      "ar": "هندوراس"
+    },
+    "img": {
+      "src": "https://flagcdn.com/hn.svg",
+      "alt": "Honduras"
+    }
+  },
+  {
+    "id": 21,
+    "name": "Jamaica",
+    "iso2": "JM",
+    "region": "Americas",
+    "translations": {
+      "ar": "جامايكا"
+    },
+    "img": {
+      "src": "https://flagcdn.com/jm.svg",
+      "alt": "Jamaica"
+    }
+  },
+  {
+    "id": 22,
+    "name": "Mexico",
+    "iso2": "MX",
+    "region": "Americas",
+    "translations": {
+      "ar": "المكسيك"
+    },
+    "img": {
+      "src": "https://flagcdn.com/mx.svg",
+      "alt": "Mexico"
+    }
+  },
+  {
+    "id": 23,
+    "name": "Nicaragua",
+    "iso2": "NI",
+    "region": "Americas",
+    "translations": {
+      "ar": "نيكاراغوا"
+    },
+    "img": {
+      "src": "https://flagcdn.com/ni.svg",
+      "alt": "Nicaragua"
+    }
+  },
+  {
+    "id": 24,
+    "name": "Panama",
+    "iso2": "PA",
+    "region": "Americas",
+    "translations": {
+      "ar": "بنما"
+    },
+    "img": {
+      "src": "https://flagcdn.com/pa.svg",
+      "alt": "Panama"
+    }
+  },
+  {
+    "id": 25,
+    "name": "Paraguay",
+    "iso2": "PY",
+    "region": "Americas",
+    "translations": {
+      "ar": "باراجواي"
+    },
+    "img": {
+      "src": "https://flagcdn.com/py.svg",
+      "alt": "Paraguay"
+    }
+  },
+  {
+    "id": 26,
+    "name": "Peru",
+    "iso2": "PE",
+    "region": "Americas",
+    "translations": {
+      "ar": "بيرو"
+    },
+    "img": {
+      "src": "https://flagcdn.com/pe.svg",
+      "alt": "Peru"
+    }
+  },
+  {
+    "id": 27,
+    "name": "Saint Kitts and Nevis",
+    "iso2": "KN",
+    "region": "Americas",
+    "translations": {
+      "ar": "سانت كيتس ونيفيس"
+    },
+    "img": {
+      "src": "https://flagcdn.com/kn.svg",
+      "alt": "Saint Kitts and Nevis"
+    }
+  },
+  {
+    "id": 28,
+    "name": "Saint Lucia",
+    "iso2": "LC",
+    "region": "Americas",
+    "translations": {
+      "ar": "سانت لوسيا"
+    },
+    "img": {
+      "src": "https://flagcdn.com/lc.svg",
+      "alt": "Saint Lucia"
+    }
+  },
+  {
+    "id": 29,
+    "name": "Saint Vincent and the Grenadines",
+    "iso2": "VC",
+    "region": "Americas",
+    "translations": {
+      "ar": "القديس فنسنت وجرينادين"
+    },
+    "img": {
+      "src": "https://flagcdn.com/vc.svg",
+      "alt": "Saint Vincent and the Grenadines"
+    }
+  },
+  {
+    "id": 30,
+    "name": "South Georgia",
+    "iso2": "GS",
+    "region": "Americas",
+    "translations": {
+      "ar": "جنوب جورجيا"
+    },
+    "img": {
+      "src": "https://flagcdn.com/gs.svg",
+      "alt": "South Georgia"
+    }
+  },
+  {
+    "id": 31,
+    "name": "Suriname",
+    "iso2": "SR",
+    "region": "Americas",
+    "translations": {
+      "ar": "سورينام"
+    },
+    "img": {
+      "src": "https://flagcdn.com/sr.svg",
+      "alt": "Suriname"
+    }
+  },
+  {
+    "id": 32,
+    "name": "The Bahamas",
+    "iso2": "BS",
+    "region": "Americas",
+    "translations": {
+      "ar": "جزر البهاما"
+    },
+    "img": {
+      "src": "https://flagcdn.com/bs.svg",
+      "alt": "The Bahamas"
+    }
+  },
+  {
+    "id": 33,
+    "name": "Trinidad and Tobago",
+    "iso2": "TT",
+    "region": "Americas",
+    "translations": {
+      "ar": "ترينيداد وتوباغو"
+    },
+    "img": {
+      "src": "https://flagcdn.com/tt.svg",
+      "alt": "Trinidad and Tobago"
+    }
+  },
+  {
+    "id": 34,
+    "name": "United States",
+    "iso2": "US",
+    "region": "Americas",
+    "translations": {
+      "ar": "الولايات المتحدة"
+    },
+    "img": {
+      "src": "https://flagcdn.com/us.svg",
+      "alt": "United States"
+    }
+  },
+  {
+    "id": 35,
+    "name": "Uruguay",
+    "iso2": "UY",
+    "region": "Americas",
+    "translations": {
+      "ar": "أوروغواي"
+    },
+    "img": {
+      "src": "https://flagcdn.com/uy.svg",
+      "alt": "Uruguay"
+    }
+  },
+  {
+    "id": 36,
+    "name": "Venezuela",
+    "iso2": "VE",
+    "region": "Americas",
+    "translations": {
+      "ar": "فنزويلا"
+    },
+    "img": {
+      "src": "https://flagcdn.com/ve.svg",
+      "alt": "Venezuela"
+    }
+  },
+  {
+    "id": 37,
+    "name": "Virgin Islands (British)",
+    "iso2": "VG",
+    "region": "Americas",
+    "translations": {
+      "ar": "جزر فيرجن (البريطانية)"
+    },
+    "img": {
+      "src": "https://flagcdn.com/vg.svg",
+      "alt": "Virgin Islands (British)"
+    }
+  }
+]

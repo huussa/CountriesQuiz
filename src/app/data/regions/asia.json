@@ -1,0 +1,600 @@
+[
+  {
+    "id": 1,
+    "name": "Afghanistan",
+    "iso2": "AF",
+    "region": "Asia",
+    "translations": {
+      "ar": "أفغانستان"
+    },
+    "img": {
+      "src": "https://flagcdn.com/af.svg",
+      "alt": "Afghanistan"
+    }
+  },
+  {
+    "id": 2,
+    "name": "Armenia",
+    "iso2": "AM",
+    "region": "Asia",
+    "translations": {
+      "ar": "أرمينيا"
+    },
+    "img": {
+      "src": "https://flagcdn.com/am.svg",
+      "alt": "Armenia"
+    }
+  },
+  {
+    "id": 3,
+    "name": "Azerbaijan",
+    "iso2": "AZ",
+    "region": "Asia",
+    "translations": {
+      "ar": "أذربيجان"
+    },
+    "img": {
+      "src": "https://flagcdn.com/az.svg",
+      "alt": "Azerbaijan"
+    }
+  },
+  {
+    "id": 4,
+    "name": "Bahrain",
+    "iso2": "BH",
+    "region": "Asia",
+    "translations": {
+      "ar": "البحرين"
+    },
+    "img": {
+      "src": "https://flagcdn.com/bh.svg",
+      "alt": "Bahrain"
+    }
+  },
+  {
+    "id": 5,
+    "name": "Bangladesh",
+    "iso2": "BD",
+    "region": "Asia",
+    "translations": {
+      "ar": "بنغلاديش"
+    },
+    "img": {
+      "src": "https://flagcdn.com/bd.svg",
+      "alt": "Bangladesh"
+    }
+  },
+  {
+    "id": 6,
+    "name": "Bhutan",
+    "iso2": "BT",
+    "region": "Asia",
+    "translations": {
+      "ar": "بوتان"
+    },
+    "img": {
+      "src": "https://flagcdn.com/bt.svg",
+      "alt": "Bhutan"
+    }
+  },
+  {
+    "id": 7,
+    "name": "Brunei",
+    "iso2": "BN",
+    "region": "Asia",
+    "translations": {
+      "ar": "بروناي"
+    },
+    "img": {
+      "src": "https://flagcdn.com/bn.svg",
+      "alt": "Brunei"
+    }
+  },
+  {
+    "id": 8,
+    "name": "Cambodia",
+    "iso2": "KH",
+    "region": "Asia",
+    "translations": {
+      "ar": "كمبوديا"
+    },
+    "img": {
+      "src": "https://flagcdn.com/kh.svg",
+      "alt": "Cambodia"
+    }
+  },
+  {
+    "id": 9,
+    "name": "China",
+    "iso2": "CN",
+    "region": "Asia",
+    "translations": {
+      "ar": "الصين"
+    },
+    "img": {
+      "src": "https://flagcdn.com/cn.svg",
+      "alt": "China"
+    }
+  },
+  {
+    "id": 10,
+    "name": "Georgia",
+    "iso2": "GE",
+    "region": "Asia",
+    "translations": {
+      "ar": "جورجيا"
+    },
+    "img": {
+      "src": "https://flagcdn.com/ge.svg",
+      "alt": "Georgia"
+    }
+  },
+  {
+    "id": 11,
+    "name": "India",
+    "iso2": "IN",
+    "region": "Asia",
+    "translations": {
+      "ar": "الهند"
+    },
+    "img": {
+      "src": "https://flagcdn.com/in.svg",
+      "alt": "India"
+    }
+  },
+  {
+    "id": 12,
+    "name": "Indonesia",
+    "iso2": "ID",
+    "region": "Asia",
+    "translations": {
+      "ar": "أندونيسيا"
+    },
+    "img": {
+      "src": "https://flagcdn.com/id.svg",
+      "alt": "Indonesia"
+    }
+  },
+  {
+    "id": 13,
+    "name": "Iran",
+    "iso2": "IR",
+    "region": "Asia",
+    "translations": {
+      "ar": "إيران"
+    },
+    "img": {
+      "src": "https://flagcdn.com/ir.svg",
+      "alt": "Iran"
+    }
+  },
+  {
+    "id": 14,
+    "name": "Iraq",
+    "iso2": "IQ",
+    "region": "Asia",
+    "translations": {
+      "ar": "العراق"
+    },
+    "img": {
+      "src": "https://flagcdn.com/iq.svg",
+      "alt": "Iraq"
+    }
+  },
+  {
+    "id": 15,
+    "name": "Israel",
+    "iso2": "IL",
+    "region": "Asia",
+    "translations": {
+      "ar": "إسرائيل"
+    },
+    "img": {
+      "src": "https://flagcdn.com/il.svg",
+      "alt": "Israel"
+    }
+  },
+  {
+    "id": 16,
+    "name": "Japan",
+    "iso2": "JP",
+    "region": "Asia",
+    "translations": {
+      "ar": "اليابان"
+    },
+    "img": {
+      "src": "https://flagcdn.com/jp.svg",
+      "alt": "Japan"
+    }
+  },
+  {
+    "id": 17,
+    "name": "Jordan",
+    "iso2": "JO",
+    "region": "Asia",
+    "translations": {
+      "ar": "الأردن"
+    },
+    "img": {
+      "src": "https://flagcdn.com/jo.svg",
+      "alt": "Jordan"
+    }
+  },
+  {
+    "id": 18,
+    "name": "Kazakhstan",
+    "iso2": "KZ",
+    "region": "Asia",
+    "translations": {
+      "ar": "كازاخستان"
+    },
+    "img": {
+      "src": "https://flagcdn.com/kz.svg",
+      "alt": "Kazakhstan"
+    }
+  },
+  {
+    "id": 19,
+    "name": "Kuwait",
+    "iso2": "KW",
+    "region": "Asia",
+    "translations": {
+      "ar": "الكويت"
+    },
+    "img": {
+      "src": "https://flagcdn.com/kw.svg",
+      "alt": "Kuwait"
+    }
+  },
+  {
+    "id": 20,
+    "name": "Kyrgyzstan",
+    "iso2": "KG",
+    "region": "Asia",
+    "translations": {
+      "ar": "قيرغيزستان"
+    },
+    "img": {
+      "src": "https://flagcdn.com/kg.svg",
+      "alt": "Kyrgyzstan"
+    }
+  },
+  {
+    "id": 21,
+    "name": "Laos",
+    "iso2": "LA",
+    "region": "Asia",
+    "translations": {
+      "ar": "لاوس"
+    },
+    "img": {
+      "src": "https://flagcdn.com/la.svg",
+      "alt": "Laos"
+    }
+  },
+  {
+    "id": 22,
+    "name": "Lebanon",
+    "iso2": "LB",
+    "region": "Asia",
+    "translations": {
+      "ar": "لبنان"
+    },
+    "img": {
+      "src": "https://flagcdn.com/lb.svg",
+      "alt": "Lebanon"
+    }
+  },
+  {
+    "id": 23,
+    "name": "Malaysia",
+    "iso2": "MY",
+    "region": "Asia",
+    "translations": {
+      "ar": "ماليزيا"
+    },
+    "img": {
+      "src": "https://flagcdn.com/my.svg",
+      "alt": "Malaysia"
+    }
+  },
+  {
+    "id": 24,
+    "name": "Maldives",
+    "iso2": "MV",
+    "region": "Asia",
+    "translations": {
+      "ar": "جزر المالديف"
+    },
+    "img": {
+      "src": "https://flagcdn.com/mv.svg",
+      "alt": "Maldives"
+    }
+  },
+  {
+    "id": 25,
+    "name": "Mongolia",
+    "iso2": "MN",
+    "region": "Asia",
+    "translations": {
+      "ar": "منغوليا"
+    },
+    "img": {
+      "src": "https://flagcdn.com/mn.svg",
+      "alt": "Mongolia"
+    }
+  },
+  {
+    "id": 26,
+    "name": "Myanmar",
+    "iso2": "MM",
+    "region": "Asia",
+    "translations": {
+      "ar": "ميانمار"
+    },
+    "img": {
+      "src": "https://flagcdn.com/mm.svg",
+      "alt": "Myanmar"
+    }
+  },
+  {
+    "id": 27,
+    "name": "Nepal",
+    "iso2": "NP",
+    "region": "Asia",
+    "translations": {
+      "ar": "نيبال"
+    },
+    "img": {
+      "src": "https://flagcdn.com/np.svg",
+      "alt": "Nepal"
+    }
+  },
+  {
+    "id": 28,
+    "name": "North Korea",
+    "iso2": "KP",
+    "region": "Asia",
+    "translations": {
+      "ar": "كوريا الشمالية"
+    },
+    "img": {
+      "src": "https://flagcdn.com/kp.svg",
+      "alt": "North Korea"
+    }
+  },
+  {
+    "id": 29,
+    "name": "Oman",
+    "iso2": "OM",
+    "region": "Asia",
+    "translations": {
+      "ar": "عمان"
+    },
+    "img": {
+      "src": "https://flagcdn.com/om.svg",
+      "alt": "Oman"
+    }
+  },
+  {
+    "id": 30,
+    "name": "Pakistan",
+    "iso2": "PK",
+    "region": "Asia",
+    "translations": {
+      "ar": "باكستان"
+    },
+    "img": {
+      "src": "https://flagcdn.com/pk.svg",
+      "alt": "Pakistan"
+    }
+  },
+  {
+    "id": 31,
+    "name": "Philippines",
+    "iso2": "PH",
+    "region": "Asia",
+    "translations": {
+      "ar": "فيلبيني"
+    },
+    "img": {
+      "src": "https://flagcdn.com/ph.svg",
+      "alt": "Philippines"
+    }
+  },
+  {
+    "id": 32,
+    "name": "Qatar",
+    "iso2": "QA",
+    "region": "Asia",
+    "translations": {
+      "ar": "قطر"
+    },
+    "img": {
+      "src": "https://flagcdn.com/qa.svg",
+      "alt": "Qatar"
+    }
+  },
+  {
+    "id": 33,
+    "name": "Saudi Arabia",
+    "iso2": "SA",
+    "region": "Asia",
+    "translations": {
+      "ar": "المملكة العربية السعودية"
+    },
+    "img": {
+      "src": "https://flagcdn.com/sa.svg",
+      "alt": "Saudi Arabia"
+    }
+  },
+  {
+    "id": 34,
+    "name": "Singapore",
+    "iso2": "SG",
+    "region": "Asia",
+    "translations": {
+      "ar": "سنغافورة"
+    },
+    "img": {
+      "src": "https://flagcdn.com/sg.svg",
+      "alt": "Singapore"
+    }
+  },
+  {
+    "id": 35,
+    "name": "South Korea",
+    "iso2": "KR",
+    "region": "Asia",
+    "translations": {
+      "ar": "كوريا الجنوبية"
+    },
+    "img": {
+      "src": "https://flagcdn.com/kr.svg",
+      "alt": "South Korea"
+    }
+  },
+  {
+    "id": 36,
+    "name": "Sri Lanka",
+    "iso2": "LK",
+    "region": "Asia",
+    "translations": {
+      "ar": "سري لانكا"
+    },
+    "img": {
+      "src": "https://flagcdn.com/lk.svg",
+      "alt": "Sri Lanka"
+    }
+  },
+  {
+    "id": 37,
+    "name": "Syria",
+    "iso2": "SY",
+    "region": "Asia",
+    "translations": {
+      "ar": "سوريا"
+    },
+    "img": {
+      "src": "https://flagcdn.com/sy.svg",
+      "alt": "Syria"
+    }
+  },
+  {
+    "id": 38,
+    "name": "Tajikistan",
+    "iso2": "TJ",
+    "region": "Asia",
+    "translations": {
+      "ar": "طاجيكستان"
+    },
+    "img": {
+      "src": "https://flagcdn.com/tj.svg",
+      "alt": "Tajikistan"
+    }
+  },
+  {
+    "id": 39,
+    "name": "Thailand",
+    "iso2": "TH",
+    "region": "Asia",
+    "translations": {
+      "ar": "تايلاند"
+    },
+    "img": {
+      "src": "https://flagcdn.com/th.svg",
+      "alt": "Thailand"
+    }
+  },
+  {
+    "id": 40,
+    "name": "Timor-Leste",
+    "iso2": "TL",
+    "region": "Asia",
+    "translations": {
+      "ar": "تيمور قراءة"
+    },
+    "img": {
+      "src": "https://flagcdn.com/tl.svg",
+      "alt": "Timor-Leste"
+    }
+  },
+  {
+    "id": 41,
+    "name": "Turkey",
+    "iso2": "TR",
+    "region": "Asia",
+    "translations": {
+      "ar": "ديك رومى"
+    },
+    "img": {
+      "src": "https://flagcdn.com/tr.svg",
+      "alt": "Turkey"
+    }
+  },
+  {
+    "id": 42,
+    "name": "Turkmenistan",
+    "iso2": "TM",
+    "region": "Asia",
+    "translations": {
+      "ar": "تركمانستان"
+    },
+    "img": {
+      "src": "https://flagcdn.com/tm.svg",
+      "alt": "Turkmenistan"
+    }
+  },
+  {
+    "id": 43,
+    "name": "United Arab Emirates",
+    "iso2": "AE",
+    "region": "Asia",
+    "translations": {
+      "ar": "الإمارات العربية المتحدة"
+    },
+    "img": {
+      "src": "https://flagcdn.com/ae.svg",
+      "alt": "United Arab Emirates"
+    }
+  },
+  {
+    "id": 44,
+    "name": "Uzbekistan",
+    "iso2": "UZ",
+    "region": "Asia",
+    "translations": {
+      "ar": "أوزبكستان"
+    },
+    "img": {
+      "src": "https://flagcdn.com/uz.svg",
+      "alt": "Uzbekistan"
+    }
+  },
+  {
+    "id": 45,
+    "name": "Vietnam",
+    "iso2": "VN",
+    "region": "Asia",
+    "translations": {
+      "ar": "فيتنام"
+    },
+    "img": {
+      "src": "https://flagcdn.com/vn.svg",
+      "alt": "Vietnam"
+    }
+  },
+  {
+    "id": 46,
+    "name": "Yemen",
+    "iso2": "YE",
+    "region": "Asia",
+    "translations": {
+      "ar": "اليمن"
+    },
+    "img": {
+      "src": "https://flagcdn.com/ye.svg",
+      "alt": "Yemen"
+    }
+  }
+]
