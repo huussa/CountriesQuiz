@@ -1,0 +1,704 @@
+[
+  {
+    "id": 1,
+    "name": "Algeria",
+    "iso2": "DZ",
+    "region": "Africa",
+    "translations": {
+      "ar": "الجزائر"
+    },
+    "img": {
+      "src": "https://flagcdn.com/dz.svg",
+      "alt": "Algeria"
+    }
+  },
+  {
+    "id": 2,
+    "name": "Angola",
+    "iso2": "AO",
+    "region": "Africa",
+    "translations": {
+      "ar": "أنغولا"
+    },
+    "img": {
+      "src": "https://flagcdn.com/ao.svg",
+      "alt": "Angola"
+    }
+  },
+  {
+    "id": 3,
+    "name": "Benin",
+    "iso2": "BJ",
+    "region": "Africa",
+    "translations": {
+      "ar": "بنين"
+    },
+    "img": {
+      "src": "https://flagcdn.com/bj.svg",
+      "alt": "Benin"
+    }
+  },
+  {
+    "id": 4,
+    "name": "Botswana",
+    "iso2": "BW",
+    "region": "Africa",
+    "translations": {
+      "ar": "بوتسوانا"
+    },
+    "img": {
+      "src": "https://flagcdn.com/bw.svg",
+      "alt": "Botswana"
+    }
+  },
+  {
+    "id": 5,
+    "name": "Burkina Faso",
+    "iso2": "BF",
+    "region": "Africa",
+    "translations": {
+      "ar": "بوركينا فاسو"
+    },
+    "img": {
+      "src": "https://flagcdn.com/bf.svg",
+      "alt": "Burkina Faso"
+    }
+  },
+  {
+    "id": 6,
+    "name": "Burundi",
+    "iso2": "BI",
+    "region": "Africa",
+    "translations": {
+      "ar": "بوروندي"
+    },
+    "img": {
+      "src": "https://flagcdn.com/bi.svg",
+      "alt": "Burundi"
+    }
+  },
+  {
+    "id": 7,
+    "name": "Cameroon",
+    "iso2": "CM",
+    "region": "Africa",
+    "translations": {
+      "ar": " "
+    },
+    "img": {
+      "src": "https://flagcdn.com/cm.svg",
+      "alt": "Cameroon"
+    }
+  },
+  {
+    "id": 8,
+    "name": "Cape Verde",
+    "iso2": "CV",
+    "region": "Africa",
+    "translations": {
+      "ar": "الرأس الأخضر"
+    },
+    "img": {
+      "src": "https://flagcdn.com/cv.svg",
+      "alt": "Cape Verde"
+    }
+  },
+  {
+    "id": 9,
+    "name": "Central African Republic",
+    "iso2": "CF",
+    "region": "Africa",
+    "translations": {
+      "ar": "جمهورية أفريقيا الوسطى"
+    },
+    "img": {
+      "src": "https://flagcdn.com/cf.svg",
+      "alt": "Central African Republic"
+    }
+  },
+  {
+    "id": 10,
+    "name": "Chad",
+    "iso2": "TD",
+    "region": "Africa",
+    "translations": {
+      "ar": "تشاد"
+    },
+    "img": {
+      "src": "https://flagcdn.com/td.svg",
+      "alt": "Chad"
+    }
+  },
+  {
+    "id": 11,
+    "name": "Comoros",
+    "iso2": "KM",
+    "region": "Africa",
+    "translations": {
+      "ar": "جزر القمر"
+    },
+    "img": {
+      "src": "https://flagcdn.com/km.svg",
+      "alt": "Comoros"
+    }
+  },
+  {
+    "id": 12,
+    "name": "Congo",
+    "iso2": "CG",
+    "region": "Africa",
+    "translations": {
+      "ar": "الكونغو"
+    },
+    "img": {
+      "src": "https://flagcdn.com/cg.svg",
+      "alt": "Congo"
+    }
+  },
+  {
+    "id": 13,
+    "name": "Democratic Republic of the Congo",
+    "iso2": "CD",
+    "region": "Africa",
+    "translations": {
+      "ar": "جمهورية الكونغو الديمقراطية"
+    },
+    "img": {
+      "src": "https://flagcdn.com/cd.svg",
+      "alt": "Democratic Republic of the Congo"
+    }
+  },
+  {
+    "id": 14,
+    "name": "Djibouti",
+    "iso2": "DJ",
+    "region": "Africa",
+    "translations": {
+      "ar": "جيبوتي"
+    },
+    "img": {
+      "src": "https://flagcdn.com/dj.svg",
+      "alt": "Djibouti"
+    }
+  },
+  {
+    "id": 15,
+    "name": "Egypt",
+    "iso2": "EG",
+    "region": "Africa",
+    "translations": {
+      "ar": "مصر"
+    },
+    "img": {
+      "src": "https://flagcdn.com/eg.svg",
+      "alt": "Egypt"
+    }
+  },
+  {
+    "id": 16,
+    "name": "Equatorial Guinea",
+    "iso2": "GQ",
+    "region": "Africa",
+    "translations": {
+      "ar": "غينيا الاستوائية"
+    },
+    "img": {
+      "src": "https://flagcdn.com/gq.svg",
+      "alt": "Equatorial Guinea"
+    }
+  },
+  {
+    "id": 17,
+    "name": "Eritrea",
+    "iso2": "ER",
+    "region": "Africa",
+    "translations": {
+      "ar": "إريتريا"
+    },
+    "img": {
+      "src": "https://flagcdn.com/er.svg",
+      "alt": "Eritrea"
+    }
+  },
+  {
+    "id": 18,
+    "name": "Eswatini",
+    "iso2": "SZ",
+    "region": "Africa",
+    "translations": {
+      "ar": "الإسواتين"
+    },
+    "img": {
+      "src": "https://flagcdn.com/sz.svg",
+      "alt": "Eswatini"
+    }
+  },
+  {
+    "id": 19,
+    "name": "Ethiopia",
+    "iso2": "ET",
+    "region": "Africa",
+    "translations": {
+      "ar": "أثيوبيا"
+    },
+    "img": {
+      "src": "https://flagcdn.com/et.svg",
+      "alt": "Ethiopia"
+    }
+  },
+  {
+    "id": 20,
+    "name": "Gabon",
+    "iso2": "GA",
+    "region": "Africa",
+    "translations": {
+      "ar": "الجابون"
+    },
+    "img": {
+      "src": "https://flagcdn.com/ga.svg",
+      "alt": "Gabon"
+    }
+  },
+  {
+    "id": 21,
+    "name": "Ghana",
+    "iso2": "GH",
+    "region": "Africa",
+    "translations": {
+      "ar": "غانا"
+    },
+    "img": {
+      "src": "https://flagcdn.com/gh.svg",
+      "alt": "Ghana"
+    }
+  },
+  {
+    "id": 22,
+    "name": "Guinea",
+    "iso2": "GN",
+    "region": "Africa",
+    "translations": {
+      "ar": "غينيا"
+    },
+    "img": {
+      "src": "https://flagcdn.com/gn.svg",
+      "alt": "Guinea"
+    }
+  },
+  {
+    "id": 23,
+    "name": "Guinea-Bissau",
+    "iso2": "GW",
+    "region": "Africa",
+    "translations": {
+      "ar": "غينيا بيساو"
+    },
+    "img": {
+      "src": "https://flagcdn.com/gw.svg",
+      "alt": "Guinea-Bissau"
+    }
+  },
+  {
+    "id": 24,
+    "name": "Ivory Coast",
+    "iso2": "CI",
+    "region": "Africa",
+    "translations": {
+      "ar": "كوت ديفوار (ساحل العاج)"
+    },
+    "img": {
+      "src": "https://flagcdn.com/ci.svg",
+      "alt": "Ivory Coast"
+    }
+  },
+  {
+    "id": 25,
+    "name": "Kenya",
+    "iso2": "KE",
+    "region": "Africa",
+    "translations": {
+      "ar": "كينيا"
+    },
+    "img": {
+      "src": "https://flagcdn.com/ke.svg",
+      "alt": "Kenya"
+    }
+  },
+  {
+    "id": 26,
+    "name": "Lesotho",
+    "iso2": "LS",
+    "region": "Africa",
+    "translations": {
+      "ar": "ليسوتو"
+    },
+    "img": {
+      "src": "https://flagcdn.com/ls.svg",
+      "alt": "Lesotho"
+    }
+  },
+  {
+    "id": 27,
+    "name": "Liberia",
+    "iso2": "LR",
+    "region": "Africa",
+    "translations": {
+      "ar": "ليبيريا"
+    },
+    "img": {
+      "src": "https://flagcdn.com/lr.svg",
+      "alt": "Liberia"
+    }
+  },
+  {
+    "id": 28,
+    "name": "Libya",
+    "iso2": "LY",
+    "region": "Africa",
+    "translations": {
+      "ar": "ليبيا"
+    },
+    "img": {
+      "src": "https://flagcdn.com/ly.svg",
+      "alt": "Libya"
+    }
+  },
+  {
+    "id": 29,
+    "name": "Madagascar",
+    "iso2": "MG",
+    "region": "Africa",
+    "translations": {
+      "ar": "مدغشقر"
+    },
+    "img": {
+      "src": "https://flagcdn.com/mg.svg",
+      "alt": "Madagascar"
+    }
+  },
+  {
+    "id": 30,
+    "name": "Malawi",
+    "iso2": "MW",
+    "region": "Africa",
+    "translations": {
+      "ar": "ملاوي"
+    },
+    "img": {
+      "src": "https://flagcdn.com/mw.svg",
+      "alt": "Malawi"
+    }
+  },
+  {
+    "id": 31,
+    "name": "Mali",
+    "iso2": "ML",
+    "region": "Africa",
+    "translations": {
+      "ar": "مالي"
+    },
+    "img": {
+      "src": "https://flagcdn.com/ml.svg",
+      "alt": "Mali"
+    }
+  },
+  {
+    "id": 32,
+    "name": "Mauritania",
+    "iso2": "MR",
+    "region": "Africa",
+    "translations": {
+      "ar": "موريتانيا"
+    },
+    "img": {
+      "src": "https://flagcdn.com/mr.svg",
+      "alt": "Mauritania"
+    }
+  },
+  {
+    "id": 33,
+    "name": "Mauritius",
+    "iso2": "MU",
+    "region": "Africa",
+    "translations": {
+      "ar": "موريشيوس"
+    },
+    "img": {
+      "src": "https://flagcdn.com/mu.svg",
+      "alt": "Mauritius"
+    }
+  },
+  {
+    "id": 34,
+    "name": "Morocco",
+    "iso2": "MA",
+    "region": "Africa",
+    "translations": {
+      "ar": "المغرب"
+    },
+    "img": {
+      "src": "https://flagcdn.com/ma.svg",
+      "alt": "Morocco"
+    }
+  },
+  {
+    "id": 35,
+    "name": "Mozambique",
+    "iso2": "MZ",
+    "region": "Africa",
+    "translations": {
+      "ar": "موزمبيق"
+    },
+    "img": {
+      "src": "https://flagcdn.com/mz.svg",
+      "alt": "Mozambique"
+    }
+  },
+  {
+    "id": 36,
+    "name": "Namibia",
+    "iso2": "NA",
+    "region": "Africa",
+    "translations": {
+      "ar": "ناميبيا"
+    },
+    "img": {
+      "src": "https://flagcdn.com/na.svg",
+      "alt": "Namibia"
+    }
+  },
+  {
+    "id": 37,
+    "name": "Niger",
+    "iso2": "NE",
+    "region": "Africa",
+    "translations": {
+      "ar": "النيجر"
+    },
+    "img": {
+      "src": "https://flagcdn.com/ne.svg",
+      "alt": "Niger"
+    }
+  },
+  {
+    "id": 38,
+    "name": "Nigeria",
+    "iso2": "NG",
+    "region": "Africa",
+    "translations": {
+      "ar": "نيجيريا"
+    },
+    "img": {
+      "src": "https://flagcdn.com/ng.svg",
+      "alt": "Nigeria"
+    }
+  },
+  {
+    "id": 39,
+    "name": "Rwanda",
+    "iso2": "RW",
+    "region": "Africa",
+    "translations": {
+      "ar": "رواندا"
+    },
+    "img": {
+      "src": "https://flagcdn.com/rw.svg",
+      "alt": "Rwanda"
+    }
+  },
+  {
+    "id": 40,
+    "name": "Sao Tome and Principe",
+    "iso2": "ST",
+    "region": "Africa",
+    "translations": {
+      "ar": "ساو تومي وبرينسيبي"
+    },
+    "img": {
+      "src": "https://flagcdn.com/st.svg",
+      "alt": "Sao Tome and Principe"
+    }
+  },
+  {
+    "id": 41,
+    "name": "Senegal",
+    "iso2": "SN",
+    "region": "Africa",
+    "translations": {
+      "ar": "السنغال"
+    },
+    "img": {
+      "src": "https://flagcdn.com/sn.svg",
+      "alt": "Senegal"
+    }
+  },
+  {
+    "id": 42,
+    "name": "Seychelles",
+    "iso2": "SC",
+    "region": "Africa",
+    "translations": {
+      "ar": "سيشيل"
+    },
+    "img": {
+      "src": "https://flagcdn.com/sc.svg",
+      "alt": "Seychelles"
+    }
+  },
+  {
+    "id": 43,
+    "name": "Sierra Leone",
+    "iso2": "SL",
+    "region": "Africa",
+    "translations": {
+      "ar": "سيراليون"
+    },
+    "img": {
+      "src": "https://flagcdn.com/sl.svg",
+      "alt": "Sierra Leone"
+    }
+  },
+  {
+    "id": 44,
+    "name": "Somalia",
+    "iso2": "SO",
+    "region": "Africa",
+    "translations": {
+      "ar": "الصومال"
+    },
+    "img": {
+      "src": "https://flagcdn.com/so.svg",
+      "alt": "Somalia"
+    }
+  },
+  {
+    "id": 45,
+    "name": "South Africa",
+    "iso2": "ZA",
+    "region": "Africa",
+    "translations": {
+      "ar": "جنوب أفريقيا"
+    },
+    "img": {
+      "src": "https://flagcdn.com/za.svg",
+      "alt": "South Africa"
+    }
+  },
+  {
+    "id": 46,
+    "name": "South Sudan",
+    "iso2": "SS",
+    "region": "Africa",
+    "translations": {
+      "ar": "جنوب السودان"
+    },
+    "img": {
+      "src": "https://flagcdn.com/ss.svg",
+      "alt": "South Sudan"
+    }
+  },
+  {
+    "id": 47,
+    "name": "Sudan",
+    "iso2": "SD",
+    "region": "Africa",
+    "translations": {
+      "ar": "السودان"
+    },
+    "img": {
+      "src": "https://flagcdn.com/sd.svg",
+      "alt": "Sudan"
+    }
+  },
+  {
+    "id": 48,
+    "name": "Tanzania",
+    "iso2": "TZ",
+    "region": "Africa",
+    "translations": {
+      "ar": "تنزانيا"
+    },
+    "img": {
+      "src": "https://flagcdn.com/tz.svg",
+      "alt": "Tanzania"
+    }
+  },
+  {
+    "id": 49,
+    "name": "The Gambia",
+    "iso2": "GM",
+    "region": "Africa",
+    "translations": {
+      "ar": "غامبيا"
+    },
+    "img": {
+      "src": "https://flagcdn.com/gm.svg",
+      "alt": "The Gambia"
+    }
+  },
+  {
+    "id": 50,
+    "name": "Togo",
+    "iso2": "TG",
+    "region": "Africa",
+    "translations": {
+      "ar": "توغو"
+    },
+    "img": {
+      "src": "https://flagcdn.com/tg.svg",
+      "alt": "Togo"
+    }
+  },
+  {
+    "id": 51,
+    "name": "Tunisia",
+    "iso2": "TN",
+    "region": "Africa",
+    "translations": {
+      "ar": "تونس"
+    },
+    "img": {
+      "src": "https://flagcdn.com/tn.svg",
+      "alt": "Tunisia"
+    }
+  },
+  {
+    "id": 52,
+    "name": "Uganda",
+    "iso2": "UG",
+    "region": "Africa",
+    "translations": {
+      "ar": "أوغندا"
+    },
+    "img": {
+      "src": "https://flagcdn.com/ug.svg",
+      "alt": "Uganda"
+    }
+  },
+  {
+    "id": 53,
+    "name": "Zambia",
+    "iso2": "ZM",
+    "region": "Africa",
+    "translations": {
+      "ar": "زامبيا"
+    },
+    "img": {
+      "src": "https://flagcdn.com/zm.svg",
+      "alt": "Zambia"
+    }
+  },
+  {
+    "id": 54,
+    "name": "Zimbabwe",
+    "iso2": "ZW",
+    "region": "Africa",
+    "translations": {
+      "ar": "زيمبابوي"
+    },
+    "img": {
+      "src": "https://flagcdn.com/zw.svg",
+      "alt": "Zimbabwe"
+    }
+  }
+]
