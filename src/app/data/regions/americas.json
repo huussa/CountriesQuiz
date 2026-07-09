@@ -469,15 +469,15 @@
   },
   {
     "id": 37,
-    "name": "Virgin Islands (British)",
+    "name": "Virgin Islands",
     "iso2": "VG",
     "region": "Americas",
     "translations": {
-      "ar": "جزر فيرجن (البريطانية)"
+      "ar": "جزر فيرجن "
     },
     "img": {
       "src": "https://flagcdn.com/vg.svg",
-      "alt": "Virgin Islands (British)"
+      "alt": "Virgin Islands"
     }
   }
 ]

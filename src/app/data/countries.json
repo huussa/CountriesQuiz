@@ -1058,7 +1058,7 @@
     "iso2": "CI",
     "region": "Africa",
     "translations": {
-      "ar": "كوت ديفوار (ساحل العاج)"
+      "ar": "ساحل العاج"
     },
     "img": {
       "src": "https://flagcdn.com/ci.svg",
@@ -2510,15 +2510,15 @@
   },
   {
     "id": 194,
-    "name": "Vatican City State (Holy See)",
+    "name": "Vatican",
     "iso2": "VA",
     "region": "Europe",
     "translations": {
-      "ar": "ولاية مدينة الفاتيكان (الكرسي الرسولي)"
+      "ar": "الفاتيكان"
     },
     "img": {
       "src": "https://flagcdn.com/va.svg",
-      "alt": "Vatican City State (Holy See)"
+      "alt": "Vatican"
     }
   },
   {
@@ -2549,15 +2549,15 @@
   },
   {
     "id": 197,
-    "name": "Virgin Islands (British)",
+    "name": "Virgin Islands",
     "iso2": "VG",
     "region": "Americas",
     "translations": {
-      "ar": "جزر فيرجن (البريطانية)"
+      "ar": "جزر فيرجن"
     },
     "img": {
       "src": "https://flagcdn.com/vg.svg",
-      "alt": "Virgin Islands (British)"
+      "alt": "Virgin Islands"
     }
   },
   {
@@ -2598,5 +2598,19 @@
       "src": "https://flagcdn.com/zw.svg",
       "alt": "Zimbabwe"
     }
+  },
+  {
+    "id": 201,
+    "name": "Palestine",
+    "iso2": "PS",
+    "region": "Asia",
+    "translations": {
+      "ar": "فلسطين"
+    },
+    "img": {
+      "src": "https://flagcdn.com/ps.svg",
+      "alt": "Palestine"
+    }
   }
+  
 ]

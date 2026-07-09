@@ -596,5 +596,18 @@
       "src": "https://flagcdn.com/ye.svg",
       "alt": "Yemen"
     }
+  }, 
+  {
+    "id": 201,
+    "name": "Palestine",
+    "iso2": "PS",
+    "region": "Asia",
+    "translations": {
+      "ar": "فلسطين"
+    },
+    "img": {
+      "src": "https://flagcdn.com/ps.svg",
+      "alt": "Palestine"
+    }
   }
 ]

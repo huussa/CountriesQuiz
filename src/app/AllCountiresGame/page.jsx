@@ -17,7 +17,7 @@ function shuffle(array) {
   return [...array].sort(() => Math.random() - 0.5);
 }
 
-function allCountiresApp() {
+function AllCountiresGame() {
   const [countries, setCountries] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [question, setQuestion] = useState(null);
@@ -27,6 +27,8 @@ function allCountiresApp() {
   const [score, setScore] = useState(0);
 
   function generateQuestion(correct) {
+    if (!correct) return;
+    
     const wrong = getRandomItems(countries, 3, correct.name);
 
     const options = shuffle([correct, ...wrong]);
@@ -36,7 +38,7 @@ function allCountiresApp() {
       correct: correct.name,
       options: options.map((c) => ({
         name: c.name,
-        nameAr: c.translations.ar,
+        nameAr: c.translations?.ar,
         code: c.iso2,
       })),
     });
@@ -102,4 +104,4 @@ function allCountiresApp() {
   );
 }
 
-export default allCountiresApp;
+export default AllCountiresGame;

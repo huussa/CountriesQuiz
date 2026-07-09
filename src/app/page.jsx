@@ -3,7 +3,7 @@
 import Link from "next/link";
 import styles from "./page.module.css";
 
-export default function Home() {
+function Home() {
   return (
     <div className={styles.menu}>
       <div className={styles.menuContainer}>
@@ -29,3 +29,4 @@ export default function Home() {
     </div>
   );
 }
+export default Home;
