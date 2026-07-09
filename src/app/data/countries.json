@@ -1027,19 +1027,6 @@
     }
   },
   {
-    "id": 80,
-    "name": "Israel",
-    "iso2": "IL",
-    "region": "Asia",
-    "translations": {
-      "ar": "إسرائيل"
-    },
-    "img": {
-      "src": "https://flagcdn.com/il.svg",
-      "alt": "Israel"
-    }
-  },
-  {
     "id": 81,
     "name": "Italy",
     "iso2": "IT",
@@ -1773,7 +1760,7 @@
     "iso2": "PH",
     "region": "Asia",
     "translations": {
-      "ar": "فيلبيني"
+      "ar": "الفلبين"
     },
     "img": {
       "src": "https://flagcdn.com/ph.svg",
@@ -2150,7 +2137,7 @@
     "iso2": "LK",
     "region": "Asia",
     "translations": {
-      "ar": "سري لانكا"
+      "ar": "سريلانكا"
     },
     "img": {
       "src": "https://flagcdn.com/lk.svg",
@@ -2293,7 +2280,7 @@
     "iso2": "TL",
     "region": "Asia",
     "translations": {
-      "ar": "تيمور قراءة"
+      "ar": "تيمور الشرقية"
     },
     "img": {
       "src": "https://flagcdn.com/tl.svg",
@@ -2371,7 +2358,7 @@
     "iso2": "TR",
     "region": "Asia",
     "translations": {
-      "ar": "ديك رومى"
+      "ar": "تركيا"
     },
     "img": {
       "src": "https://flagcdn.com/tr.svg",

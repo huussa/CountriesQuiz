@@ -17,7 +17,10 @@ function shuffle(array) {
   return [...array].sort(() => Math.random() - 0.5);
 }
 
-function AllCountiresGame() {
+function Game(){
+  return allCountiresGame()
+}
+function allCountiresGame() {
   const [countries, setCountries] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [question, setQuestion] = useState(null);
@@ -26,9 +29,7 @@ function AllCountiresGame() {
   const [isAnswered, setIsAnswered] = useState(false);
   const [score, setScore] = useState(0);
 
-  function generateQuestion(correct) {
-    if (!correct) return;
-    
+  function generateQuestion(correct) {    
     const wrong = getRandomItems(countries, 3, correct.name);
 
     const options = shuffle([correct, ...wrong]);
@@ -44,6 +45,7 @@ function AllCountiresGame() {
     });
   }
 
+  // edit here 
   useEffect(() => {
     const shuffledCountries = shuffle(countriesData);
 
@@ -56,6 +58,27 @@ function AllCountiresGame() {
 
     generateQuestion(countries[currentIndex]);
   }, [countries, currentIndex]);
+
+useEffect(() => {
+  if (countries.length > 0 && currentIndex < countries.length - 1) {
+    const nextCountry = countries[currentIndex + 1];
+    
+    if (nextCountry && nextCountry.img) {
+      let imageStringUrl = "";
+      
+      if (typeof nextCountry.img === "string") {
+        imageStringUrl = nextCountry.img;
+      } else if (typeof nextCountry.img === "object") {
+        imageStringUrl = nextCountry.img.src || nextCountry.img.png || nextCountry.img.svg; 
+      }
+
+      if (imageStringUrl) {
+        const img = new Image();
+        img.src = imageStringUrl; 
+      }
+    }
+  }
+}, [currentIndex, countries]);
 
   function handleNextQuestion() {
     if (!selectedAnswer) {
@@ -104,4 +127,4 @@ function AllCountiresGame() {
   );
 }
 
-export default AllCountiresGame;
+export default Game;

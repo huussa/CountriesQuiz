@@ -9,7 +9,6 @@ function QuestionCard({
   isAnswered,
   onAnswer,
 }) {
-
   const getButtonClass = (opt) => {
     if (!isAnswered) return "";
     if (opt.name === correctAnswer) return styles.true;

@@ -13,7 +13,6 @@ function Home() {
         <div className={styles.menuButtons}>
           <Link href="/AllCountiresGame" className={styles.menuBtn}>
             <span>🚀 Start Game</span>
-            <span className={styles.btnSubtext}>All Countries</span>
           </Link>
         </div>
 
