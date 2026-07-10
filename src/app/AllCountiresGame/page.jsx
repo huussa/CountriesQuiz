@@ -1,129 +1,87 @@
 "use client";
 
+import { useState } from "react";
 import styles from "./page.module.css";
-import Header from "./components/header";
-import QuestionCard from "./components/question-card";
-import NextQuestionButton from "./components/next-question-button";
-import countriesData from "../data/countries.json";
-import { useEffect, useState } from "react";
+import AllCountiresGame from "./components/countries-game";
 
-function getRandomItems(array, count, exclude = null) {
-  const filtered = array.filter((item) => item.name !== exclude);
+function Game() {
+  const [selectedRegion, setSelectedRegion] = useState("All");
+  const [selectedLimit, setSelectedLimit] = useState("All");
 
-  return [...filtered].sort(() => Math.random() - 0.5).slice(0, count);
-}
+  const [isGameStarted, setIsGameStarted] = useState(false);
 
-function shuffle(array) {
-  return [...array].sort(() => Math.random() - 0.5);
-}
-
-function Game(){
-  return allCountiresGame()
-}
-function allCountiresGame() {
-  const [countries, setCountries] = useState([]);
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [question, setQuestion] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [selectedAnswer, setSelectedAnswer] = useState(null);
-  const [isAnswered, setIsAnswered] = useState(false);
-  const [score, setScore] = useState(0);
-
-  function generateQuestion(correct) {    
-    const wrong = getRandomItems(countries, 3, correct.name);
-
-    const options = shuffle([correct, ...wrong]);
-
-    setQuestion({
-      img: correct.img,
-      correct: correct.name,
-      options: options.map((c) => ({
-        name: c.name,
-        nameAr: c.translations?.ar,
-        code: c.iso2,
-      })),
-    });
+  const regions = [
+    {
+      id: "All",
+      limits: [10, 20, 50, 100, "All"],
+    },
+    {
+      id: "Asia",
+      limits: [10, 20, 30, "All"],
+    },
+    {
+      id: "Europe",
+      limits: [10, 20, 30, "All"],
+    },
+    {
+      id: "Africa",
+      limits: [10, 20, 30, "All"],
+    },
+    {
+      id: "Americas",
+      limits: [10, 20, "All"],
+    },
+    {
+      id: "Oceania",
+      limits: [5, 10, "All"],
+    },
+  ];
+  const currentRegionObject = regions.find((r) => r.id === selectedRegion);
+  // دالة بدء اللعبة
+  function handleStartGame() {
+    setIsGameStarted(true);
   }
 
-  // edit here 
-  useEffect(() => {
-    const shuffledCountries = shuffle(countriesData);
-
-    setCountries(shuffledCountries);
-    setIsLoading(false);
-  }, []);
-
-  useEffect(() => {
-    if (!countries.length) return;
-
-    generateQuestion(countries[currentIndex]);
-  }, [countries, currentIndex]);
-
-useEffect(() => {
-  if (countries.length > 0 && currentIndex < countries.length - 1) {
-    const nextCountry = countries[currentIndex + 1];
-    
-    if (nextCountry && nextCountry.img) {
-      let imageStringUrl = "";
-      
-      if (typeof nextCountry.img === "string") {
-        imageStringUrl = nextCountry.img;
-      } else if (typeof nextCountry.img === "object") {
-        imageStringUrl = nextCountry.img.src || nextCountry.img.png || nextCountry.img.svg; 
-      }
-
-      if (imageStringUrl) {
-        const img = new Image();
-        img.src = imageStringUrl; 
-      }
-    }
+  if (isGameStarted) {
+    return <AllCountiresGame region={selectedRegion} limit={selectedLimit} />;
   }
-}, [currentIndex, countries]);
-
-  function handleNextQuestion() {
-    if (!selectedAnswer) {
-      return;
-    }
-    if (currentIndex < countries.length - 1) {
-      setCurrentIndex((prev) => prev + 1);
-      setSelectedAnswer(null);
-      setIsAnswered(false);
-    } else {
-      alert("No more questions available.");
-    }
-  }
-  function handleSelectAnswer(option) {
-    if (isAnswered) return;
-    setSelectedAnswer(option);
-    setIsAnswered(true);
-    if (option.name === question.correct) {
-      setScore((prev) => prev + 1);
-    }
-  }
-  if (isLoading || !question) return <p>Loading...</p>;
-
   return (
-    <>
-      <Header score={score} />
+    <div className={styles.page}>
+      <h1>Game Settings</h1>
 
-      <div className={styles.page}>
-        <>
-          <QuestionCard
-            img={question?.img}
-            number={currentIndex + 1}
-            options={question?.options || []}
-            correctAnswer={question?.correct}
-            selectedAnswer={selectedAnswer}
-            isAnswered={isAnswered}
-            onAnswer={handleSelectAnswer}
-          />
-          <NextQuestionButton
-            nextQuestionButton={styles.nextQuestionButton}
-            onClick={handleNextQuestion}
-          />
-        </>
+      <div className={styles.settingsSection}>
+        <h2>Select Region</h2>
+        <div className={styles.buttons}>
+          {regions.map((region) => (
+            <button
+              key={region.id}
+              onClick={() => setSelectedRegion(region.id)}
+              className={`${styles.nextQuestionButton} ${selectedRegion === region.id ? styles.active : ""}`}
+            >
+              {`${region.id} Region`}
+            </button>
+          ))}
+        </div>
       </div>
-    </>
+
+      <div className={styles.settingsSection}>
+        <h2>Select Limit</h2>
+        <div className={styles.buttons}>
+          {currentRegionObject.limits.map((limit) => (
+            <button
+              key={limit}
+              onClick={() => setSelectedLimit(limit)}
+              className={`${styles.nextQuestionButton} ${selectedLimit === limit ? styles.active : ""}`}
+            >
+              {`${limit} Countries`}
+            </button>
+          ))}
+        </div>
+      </div>
+      <button className={styles.nextQuestionButton} onClick={handleStartGame}>
+        🚀 Start Game
+      </button>
+    </div>
   );
 }
 

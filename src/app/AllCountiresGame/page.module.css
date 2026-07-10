@@ -126,6 +126,26 @@
   transform: translateY(-1px);
 }
 
+/* Game settings */
+.settingsSection {
+  margin: 20px 0;
+  text-align: center;
+}
+.settingsSection .buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.settingsSection h2 {
+  color: #fff;
+  font-size: 1.5rem;
+}
+.active {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.6);
+}
+/* Media Queries */
 @media (max-width: 768px) {
   .card {
     width: 90%;
