@@ -2,6 +2,7 @@
 
 import styles from "../page.module.css";
 import Header from "./header";
+import ProgressBar from './progress-bar'
 import QuestionCard from "./question-card";
 import NextQuestionButton from "./next-question-button";
 import ReturnButton from "./return-button";
@@ -115,6 +116,7 @@ function AllCountiresGame({ region = "All", limit = "ِAll" }) {
 
       <div className={styles.page}>
         <>
+          <ProgressBar currentIndex={currentIndex} totalQuestions={countries.length} />
           <QuestionCard
             img={question?.img}
             number={currentIndex + 1}
