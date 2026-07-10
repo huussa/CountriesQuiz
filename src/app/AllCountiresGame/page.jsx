@@ -37,7 +37,7 @@ function Game() {
     },
   ];
   const currentRegionObject = regions.find((r) => r.id === selectedRegion);
-  // دالة بدء اللعبة
+
   function handleStartGame() {
     setIsGameStarted(true);
   }
