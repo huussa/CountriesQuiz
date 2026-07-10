@@ -4,6 +4,7 @@ import styles from "../page.module.css";
 import Header from "./header";
 import QuestionCard from "./question-card";
 import NextQuestionButton from "./next-question-button";
+import ReturnButton from "./return-button";
 import countriesData from "../../data/countries.json";
 import { useEffect, useState } from "react";
 
@@ -17,7 +18,7 @@ function shuffle(array) {
   return [...array].sort(() => Math.random() - 0.5);
 }
 
-function AllCountiresGame({region = "All", limit = "ِAll"}) {
+function AllCountiresGame({ region = "All", limit = "ِAll" }) {
   const [countries, setCountries] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [question, setQuestion] = useState(null);
@@ -26,7 +27,7 @@ function AllCountiresGame({region = "All", limit = "ِAll"}) {
   const [isAnswered, setIsAnswered] = useState(false);
   const [score, setScore] = useState(0);
 
-  function generateQuestion(correct) {    
+  function generateQuestion(correct) {
     const wrong = getRandomItems(countries, 3, correct.name);
 
     const options = shuffle([correct, ...wrong]);
@@ -42,7 +43,6 @@ function AllCountiresGame({region = "All", limit = "ِAll"}) {
     });
   }
 
-  // edit here 
   useEffect(() => {
     let filteredCountries = countriesData;
     if (region !== "All") {
@@ -51,7 +51,8 @@ function AllCountiresGame({region = "All", limit = "ِAll"}) {
 
     const shuffledCountries = shuffle(filteredCountries);
 
-    const limitedCountries = limit === "All" ? shuffledCountries : shuffledCountries.slice(0, limit);
+    const limitedCountries =
+      limit === "All" ? shuffledCountries : shuffledCountries.slice(0, limit);
 
     setCountries(limitedCountries);
     setIsLoading(false);
@@ -63,26 +64,27 @@ function AllCountiresGame({region = "All", limit = "ِAll"}) {
     generateQuestion(countries[currentIndex]);
   }, [countries, currentIndex]);
 
-useEffect(() => {
-  if (countries.length > 0 && currentIndex < countries.length - 1) {
-    const nextCountry = countries[currentIndex + 1];
-    
-    if (nextCountry && nextCountry.img) {
-      let imageStringUrl = "";
-      
-      if (typeof nextCountry.img === "string") {
-        imageStringUrl = nextCountry.img;
-      } else if (typeof nextCountry.img === "object") {
-        imageStringUrl = nextCountry.img.src || nextCountry.img.png || nextCountry.img.svg; 
-      }
+  useEffect(() => {
+    if (countries.length > 0 && currentIndex < countries.length - 1) {
+      const nextCountry = countries[currentIndex + 1];
 
-      if (imageStringUrl) {
-        const img = new Image();
-        img.src = imageStringUrl; 
+      if (nextCountry && nextCountry.img) {
+        let imageStringUrl = "";
+
+        if (typeof nextCountry.img === "string") {
+          imageStringUrl = nextCountry.img;
+        } else if (typeof nextCountry.img === "object") {
+          imageStringUrl =
+            nextCountry.img.src || nextCountry.img.png || nextCountry.img.svg;
+        }
+
+        if (imageStringUrl) {
+          const img = new Image();
+          img.src = imageStringUrl;
+        }
       }
     }
-  }
-}, [currentIndex, countries]);
+  }, [currentIndex, countries]);
 
   function handleNextQuestion() {
     if (!selectedAnswer) {
@@ -104,6 +106,7 @@ useEffect(() => {
       setScore((prev) => prev + 1);
     }
   }
+
   if (isLoading || !question) return <p>Loading...</p>;
 
   return (
@@ -125,6 +128,7 @@ useEffect(() => {
             nextQuestionButton={styles.nextQuestionButton}
             onClick={handleNextQuestion}
           />
+          <ReturnButton />
         </>
       </div>
     </>
