@@ -8,6 +8,7 @@ import NextQuestionButton from "./next-question-button";
 import ReturnButton from "./return-button";
 import countriesData from "../../data/countries.json";
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 
 function getRandomItems(array, count, exclude = null) {
   const filtered = array.filter((item) => item.name !== exclude);
@@ -27,6 +28,7 @@ function AllCountiresGame({ region = "All", limit = "ِAll" }) {
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [isAnswered, setIsAnswered] = useState(false);
   const [score, setScore] = useState(0);
+  const router = useRouter()
 
   function generateQuestion(correct) {
     const wrong = getRandomItems(countries, 3, correct.name);
@@ -96,7 +98,7 @@ function AllCountiresGame({ region = "All", limit = "ِAll" }) {
       setSelectedAnswer(null);
       setIsAnswered(false);
     } else {
-      alert("No more questions available.");
+      router.push(`/AllCountiresGame/EndingScreen?score=${score}&total=${countries.length}`);
     }
   }
   function handleSelectAnswer(option) {
@@ -129,8 +131,9 @@ function AllCountiresGame({ region = "All", limit = "ِAll" }) {
           <NextQuestionButton
             nextQuestionButton={styles.nextQuestionButton}
             onClick={handleNextQuestion}
+            word={currentIndex === countries.length ? "Finish" : "Next"}
           />
-          <ReturnButton />
+          <ReturnButton href={""}/>
         </>
       </div>
     </>

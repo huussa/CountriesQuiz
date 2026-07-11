@@ -1,12 +1,23 @@
+"use client";
+
 import styles from "../page.module.css";
-function ReturnButton() {
+import { useRouter } from "next/navigation";
+
+function ReturnButton({ href, text = "Return" }) {
+    const router = useRouter();
+
+    function handleClick() {
+        href ? router.push(href) : window.location.reload();
+    }
+
     return (
         <button 
             className={styles.nextQuestionButton}
-            onClick={() => window.location.reload()}
+            onClick={handleClick}
         >
-            Return
+            {text}
         </button>
-    )
+    );
 }
+
 export default ReturnButton;
