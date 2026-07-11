@@ -5,7 +5,9 @@ function Header({ score }) {
     <header className={styles.header}>
       <h1>Countries Quiz</h1>
 
-      <div><p className={styles.score}>Score: {score}</p></div>
+      <div style={{display: `${score < 0 ? "none" : "block"}`}}>
+        <p className={styles.score}>Score: {score}</p>
+      </div>
     </header>
   );
 }
