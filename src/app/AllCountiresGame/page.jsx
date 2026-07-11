@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import styles from "./page.module.css";
+import Header from "./components/header"
 import AllCountiresGame from "./components/countries-game";
 
 function Game() {
@@ -47,6 +48,7 @@ function Game() {
   }
   return (
     <div className={styles.page}>
+      <Header score={-1} />
       <h1>Game Settings</h1>
 
       <div className={styles.settingsSection}>
