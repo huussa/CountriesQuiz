@@ -4,6 +4,7 @@ function ProgressBar({ currentIndex, totalQuestions }) {
   return (
   <div className={styles.progressBar}>
     <div className={styles.progressFill} style={{ width: `${progressPercentage}%` }}></div>
+    <div className={styles.progressText}>{`${currentIndex + 1} / ${totalQuestions}`}</div>
   </div>
   )
 }
