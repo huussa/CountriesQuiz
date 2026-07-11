@@ -1,0 +1,11 @@
+{
+
+    "card" : {
+        "title" : "🌍 Countries Quiz",
+        "description" : "Test your knowledge about countries around the world!",
+        "howToPlay" : "How to Play",
+        "howToPlayStep1" : "Look at the country flag",
+        "howToPlayStep2" : "Select the correct country name",
+        "howToPlayStep3" : "Get as many correct as you can!"
+    }
+}
