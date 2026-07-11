@@ -98,7 +98,9 @@ function AllCountiresGame({ region = "All", limit = "ِAll" }) {
       setSelectedAnswer(null);
       setIsAnswered(false);
     } else {
-      router.push(`/AllCountiresGame/EndingScreen?score=${score}&total=${countries.length}`);
+      sessionStorage.setItem("score", score);
+      sessionStorage.setItem("total", countries.length);
+      router.push(`/AllCountiresGame/EndingScreen`);
     }
   }
   function handleSelectAnswer(option) {
