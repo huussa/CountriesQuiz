@@ -1,4 +1,5 @@
 import styles from "../page.module.css";
+import { useTranslation } from "react-i18next";
 
 function QuestionCard({
   img,
@@ -9,16 +10,24 @@ function QuestionCard({
   isAnswered,
   onAnswer,
 }) {
+  const { t, i18n } = useTranslation();
+
   const getButtonClass = (opt) => {
     if (!isAnswered) return "";
     if (opt.name === correctAnswer) return styles.true;
     if (opt.name === selectedAnswer.name) return styles.false;
     return "";
   };
+  const getCountryName = (country) => {
+    if (i18n.language === 'ar' && country.nameAr) {
+      return country.nameAr;
+    }
+    return country.name; 
+  };
 
   return (
     <div className={styles.card}>
-      <h2>{number}. what is the name of this country?</h2>
+      <h2>{number}. {t("gamePage.question")}</h2>
       <img src={img.src} alt={img.alt} />
       {options.map((opt) => (
         <button
@@ -26,7 +35,7 @@ function QuestionCard({
           onClick={() => onAnswer(opt)}
           className={getButtonClass(opt)}
         >
-          {opt.nameAr}
+          {getCountryName(opt)}
         </button>
       ))}
     </div>

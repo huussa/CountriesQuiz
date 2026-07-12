@@ -1,0 +1,41 @@
+{
+    "mainPage" : {
+        "title" : "🌍 اختبار الدول",
+        "description" : "!اختبر معرفتك حول الدول في جميع أنحاء العالم",
+        "howToPlay" : "طريقة اللعب",
+        "howToPlayStep1" : "انظر الى علم الدوله",
+        "howToPlayStep2" : "اختر اسم الدوله الصحيح",
+        "howToPlayStep3" : "اضغط على زر 'التالي' للانتقال للسؤال التالي"
+    },
+    "gameSettingsPage" : {
+        "title" : "اعدادات اللعبه",
+        "region" : "اختر القاره",
+        "limit" : "اختر عدد الاسئله"
+    },
+    "regions": {
+        "allRegions": "جميع القارات",
+        "asia": "دول آسيا",
+        "europe": "دول أوروبا",
+        "africa": "دول أفريقيا",
+        "americas": "دول أمريكا",
+        "oceania": "دول المحيط الهادئ"
+    },
+    "words": {
+        "countries": "دولة",
+        "all": "جميع الدول"
+    },
+    "gamePage" : {
+        "question" : "ماهو اسم هذه الدوله",
+        "score" : "النتيجه: "
+    },
+    "endingPage" : {
+        "title" : "انتهت اللعبه",
+        "score" : "نتيجتك هي: "
+    },
+    "buttons" : {
+        "startGame" : "🚀 ابدء اللعبه",
+        "next" : "التالي",
+        "return" : "العوده"
+    }
+    
+}

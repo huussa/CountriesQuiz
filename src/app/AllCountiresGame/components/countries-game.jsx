@@ -20,7 +20,7 @@ function shuffle(array) {
   return [...array].sort(() => Math.random() - 0.5);
 }
 
-function AllCountiresGame({ region = "All", limit = "ِAll" }) {
+function AllCountiresGame({ region = "allRegions", limit = "ِAll" }) {
   const [countries, setCountries] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [question, setQuestion] = useState(null);
@@ -48,7 +48,7 @@ function AllCountiresGame({ region = "All", limit = "ِAll" }) {
 
   useEffect(() => {
     let filteredCountries = countriesData;
-    if (region !== "All") {
+    if (region !== "allRegions") {
       filteredCountries = countriesData.filter((c) => c.region === region);
     }
 
@@ -130,12 +130,14 @@ function AllCountiresGame({ region = "All", limit = "ِAll" }) {
             isAnswered={isAnswered}
             onAnswer={handleSelectAnswer}
           />
-          <NextQuestionButton
-            nextQuestionButton={styles.nextQuestionButton}
-            onClick={handleNextQuestion}
-            word={currentIndex === countries.length ? "Finish" : "Next"}
-          />
-          <ReturnButton href={""}/>
+          <div style={{ display: "flex" }}>
+            <NextQuestionButton
+              nextQuestionButton={styles.nextQuestionButton}
+              onClick={handleNextQuestion}
+              word={currentIndex === countries.length ? "Finish" : "Next"}
+            />
+            <ReturnButton href={""}/>
+          </div>
         </>
       </div>
     </>
