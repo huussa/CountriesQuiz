@@ -130,7 +130,7 @@ function AllCountiresGame({ region = "allRegions", limit = "ِAll" }) {
             isAnswered={isAnswered}
             onAnswer={handleSelectAnswer}
           />
-          <div style={{ display: "flex" }}>
+          <div style={{ display: "flex", gap: "10px"}}>
             <NextQuestionButton
               nextQuestionButton={styles.nextQuestionButton}
               onClick={handleNextQuestion}
