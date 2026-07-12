@@ -13,7 +13,7 @@
         "limit" : "Select Limit"
     },
     "regions": {
-        "all regions": "All Regions",
+        "allRegions": "All Regions",
         "Asia": "Asia",
         "Europe": "Europe",
         "Africa": "Africa",
