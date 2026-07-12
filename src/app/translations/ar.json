@@ -10,7 +10,7 @@
     "gameSettingsPage" : {
         "title" : "اعدادات اللعبه",
         "region" : "اختر القاره",
-        "limit" : "اختر عدد الاسئله"
+        "limit" : "اختر عدد الاسئله (الدول)"
     },
     "regions": {
         "allRegions": "جميع القارات",
