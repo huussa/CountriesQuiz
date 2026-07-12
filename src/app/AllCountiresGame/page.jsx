@@ -19,23 +19,23 @@ function Game() {
       limits: [10, 20, 50, 100, "All"],
     },
     {
-      id: "asia",
+      id: "Asia",
       limits: [10, 20, 30, "All"],
     },
     {
-      id: "europe",
+      id: "Europe",
       limits: [10, 20, 30, "All"],
     },
     {
-      id: "africa",
+      id: "Africa",
       limits: [10, 20, 30, "All"],
     },
     {
-      id: "americas",
+      id: "Americas",
       limits: [10, 20, "All"],
     },
     {
-      id: "oceania",
+      id: "Oceania",
       limits: [5, 10, "All"],
     },
   ];

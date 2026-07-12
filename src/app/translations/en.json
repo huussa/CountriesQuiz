@@ -14,11 +14,11 @@
     },
     "regions": {
         "all regions": "All Regions",
-        "asia": "Asia",
-        "europe": "Europe",
-        "africa": "Africa",
-        "americas": "Americas",
-        "oceania": "Oceania"
+        "Asia": "Asia",
+        "Europe": "Europe",
+        "Africa": "Africa",
+        "Americas": "Americas",
+        "Oceania": "Oceania"
     },
     "words": {
         "countries": "Countries",
