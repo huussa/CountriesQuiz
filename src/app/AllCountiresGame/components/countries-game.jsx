@@ -135,6 +135,7 @@ function AllCountiresGame({ region = "allRegions", limit = "ِAll" }) {
       sessionStorage.setItem("scoreNow", score);
       sessionStorage.setItem("totalNow", countries.length);
       sessionStorage.setItem("highStreakNow", Math.max(streaks));
+      setIsGameActive(false);
       router.push(`/AllCountiresGame/EndingScreen`);
     }
   }
