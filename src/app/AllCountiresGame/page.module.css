@@ -158,6 +158,13 @@
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   transition: width 0.3s ease;
 }
+
+.streakProgressFill {
+  height: 100%;
+  background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+  box-shadow: 0 0 15px rgba(253, 160, 133, 0.6);
+  transition: width 0.3s ease;
+}
 .progressText {
   position: absolute;
   top: 0;
@@ -171,13 +178,9 @@
   font-size: 14px;
   font-weight: bold;
   z-index: 1;
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
 }
-.streakProgressFill {
-  height: 100%;
-  background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
-  box-shadow: 0 0 15px rgba(253, 160, 133, 0.6);
-  transition: width 0.3s ease;
-}
+
 /* Circular Progress Bar */
 .progressWrapper {
   width: 200px;

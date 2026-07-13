@@ -10,7 +10,7 @@ function ProgressBar({ currentIndex, totalQuestions, streak, streakword }) {
     <>
       <div className={styles.progressBar}>
         <div className={streak < 3 ? styles.progressFill : styles.streakProgressFill} style={{ width: `${progressPercentage}%` }}></div>
-        <div className={styles.progressText} dir={dir === "ar" ? "rtl" : "ltr"} style={{color: `${streak < 3 ? "#fff" : "#2a2a3e"}`}}>{streak < 3 ? `${currentIndex + 1} / ${totalQuestions}` : `${currentIndex + 1} / ${totalQuestions} ${t("gamePage.streak")}${streak}🔥`}</div>
+        <div className={styles.progressText} dir={dir === "ar" ? "rtl" : "ltr"}>{streak < 3 ? `${currentIndex + 1} / ${totalQuestions}` : `${currentIndex + 1} / ${totalQuestions} ${t("gamePage.streak")}${streak}🔥`}</div>
       </div>
     </>
   )

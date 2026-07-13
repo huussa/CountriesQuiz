@@ -29,6 +29,7 @@ function AllCountiresGame({ region = "allRegions", limit = "ِAll" }) {
   const [isAnswered, setIsAnswered] = useState(false);
   const [score, setScore] = useState(0);
   const [streak, setStreak] = useState(0);
+  const streaks = []
   const router = useRouter()
 
   function generateQuestion(correct) {
@@ -99,8 +100,9 @@ function AllCountiresGame({ region = "allRegions", limit = "ِAll" }) {
       setSelectedAnswer(null);
       setIsAnswered(false);
     } else {
-      sessionStorage.setItem("score", score);
-      sessionStorage.setItem("total", countries.length);
+      sessionStorage.setItem("scoreNow", score);
+      sessionStorage.setItem("totalNow", countries.length);
+      sessionStorage.setItem("highStreakNow", Math.max(streaks))
       router.push(`/AllCountiresGame/EndingScreen`);
     }
   }
@@ -112,6 +114,7 @@ function AllCountiresGame({ region = "allRegions", limit = "ِAll" }) {
       setScore((prev) => prev + 1);
       setStreak((prev) => prev + 1);
     } else {
+      streaks.push(streak)
       setStreak(0);
     }
   }

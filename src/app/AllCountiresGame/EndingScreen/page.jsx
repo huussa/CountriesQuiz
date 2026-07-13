@@ -13,8 +13,8 @@ function EndingScreen() {
   const [total, setTotal] = useState(0);
 
   useEffect(() => {
-    const savedScore = sessionStorage.getItem("score");
-    const savedTotal = sessionStorage.getItem("total");
+    const savedScore = sessionStorage.getItem("scoreNow");
+    const savedTotal = sessionStorage.getItem("totalNow");
     if (savedScore && savedTotal) {
       setScore(parseInt(savedScore));
       setTotal(parseInt(savedTotal));
