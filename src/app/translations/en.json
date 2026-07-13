@@ -36,6 +36,7 @@
     "buttons" : {
         "startGame" : "🚀 Start Game",
         "next" : "Next",
+        "end" : "End Quiz",
         "return" : "Return"
     }
     

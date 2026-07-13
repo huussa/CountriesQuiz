@@ -138,7 +138,7 @@ function AllCountiresGame({ region = "allRegions", limit = "ِAll" }) {
             <NextQuestionButton
               nextQuestionButton={styles.nextQuestionButton}
               onClick={handleNextQuestion}
-              word={currentIndex === countries.length ? "Finish" : "Next"}
+              lastQuestion={currentIndex === countries.length - 1}
             />
             <ReturnButton href={""}/>
           </div>
