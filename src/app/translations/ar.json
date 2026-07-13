@@ -26,7 +26,8 @@
     },
     "gamePage" : {
         "question" : "ماهو اسم هذه الدوله",
-        "score" : "النتيجه: "
+        "score" : "النتيجه: ",
+        "streak" : "الستريك: "
     },
     "endingPage" : {
         "title" : "انتهت اللعبه",

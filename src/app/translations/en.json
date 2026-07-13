@@ -26,7 +26,8 @@
     },
     "gamePage" : {
         "question" : "what is the name of this country?",
-        "score" : "Score: "
+        "score" : "Score: ",
+        "streak" : "Streak: "
     },
     "endingPage" : {
         "title" : "Game Over",

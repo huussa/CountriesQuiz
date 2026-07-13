@@ -151,6 +151,7 @@
   background-color: #2a2a3e;
   overflow: hidden;
   position: relative;
+  transition: width 0.4s ease-in-out, background 0.5s ease, box-shadow 0.5s ease;
 }
 .progressFill {
   height: 100%;
@@ -171,12 +172,18 @@
   font-weight: bold;
   z-index: 1;
 }
+.streakProgressFill {
+  height: 100%;
+  background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+  box-shadow: 0 0 15px rgba(253, 160, 133, 0.6);
+  transition: width 0.3s ease;
+}
 /* Circular Progress Bar */
 .progressWrapper {
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  background: conic-gradient(#667eea var(--progress), #764ba2 0);
+  background: conic-gradient(#667eea var(--progress), #2a2a3e 0);
   display: flex;
   align-items: center;
   justify-content: center;

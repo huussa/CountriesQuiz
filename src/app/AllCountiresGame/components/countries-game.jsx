@@ -28,6 +28,7 @@ function AllCountiresGame({ region = "allRegions", limit = "ِAll" }) {
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [isAnswered, setIsAnswered] = useState(false);
   const [score, setScore] = useState(0);
+  const [streak, setStreak] = useState(0);
   const router = useRouter()
 
   function generateQuestion(correct) {
@@ -109,6 +110,9 @@ function AllCountiresGame({ region = "allRegions", limit = "ِAll" }) {
     setIsAnswered(true);
     if (option.name === question.correct) {
       setScore((prev) => prev + 1);
+      setStreak((prev) => prev + 1);
+    } else {
+      setStreak(0);
     }
   }
 
@@ -120,7 +124,7 @@ function AllCountiresGame({ region = "allRegions", limit = "ِAll" }) {
 
       <div className={styles.page}>
         <>
-          <ProgressBar currentIndex={currentIndex} totalQuestions={countries.length} />
+          <ProgressBar currentIndex={currentIndex} totalQuestions={countries.length} streak={streak}/>
           <QuestionCard
             img={question?.img}
             number={currentIndex + 1}

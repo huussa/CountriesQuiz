@@ -11,6 +11,7 @@ function QuestionCard({
   onAnswer,
 }) {
   const { t, i18n } = useTranslation();
+  const dir = i18n.language
 
   const getButtonClass = (opt) => {
     if (!isAnswered) return "";
@@ -27,7 +28,7 @@ function QuestionCard({
 
   return (
     <div className={styles.card}>
-      <h2>{number}. {t("gamePage.question")}</h2>
+      <h2 dir={dir === "ar" ? "rtl" : "ltr"}>{number}. {t("gamePage.question")}</h2>
       <img src={img.src} alt={img.alt} />
       {options.map((opt) => (
         <button
