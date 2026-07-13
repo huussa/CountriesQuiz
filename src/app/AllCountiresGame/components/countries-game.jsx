@@ -2,7 +2,6 @@
 
 import styles from "../page.module.css";
 import Header from "./header";
-import ProgressBar from './progress-bar'
 import QuestionCard from "./question-card";
 import NextQuestionButton from "./next-question-button";
 import ReturnButton from "./return-button";
@@ -20,6 +19,14 @@ function shuffle(array) {
   return [...array].sort(() => Math.random() - 0.5);
 }
 
+const formatTime = (totalSeconds) => {
+  const minutes = Math.floor(totalSeconds / 60)
+    .toString()
+    .padStart(2, "0");
+  const seconds = (totalSeconds % 60).toString().padStart(2, "0");
+  return `${minutes}:${seconds}`;
+};
+
 function AllCountiresGame({ region = "allRegions", limit = "ِAll" }) {
   const [countries, setCountries] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -29,8 +36,14 @@ function AllCountiresGame({ region = "allRegions", limit = "ِAll" }) {
   const [isAnswered, setIsAnswered] = useState(false);
   const [score, setScore] = useState(0);
   const [streak, setStreak] = useState(0);
-  const streaks = []
-  const router = useRouter()
+  const [time, setTime] = useState(0);
+  const [isGameActive, setIsGameActive] = useState(false);
+  // const [bestTime, setBestTime] = useState(
+  //   localStorage.getItem("bestTime") ? parseInt(savedBestTime) : null,
+  // );
+
+  const streaks = [];
+  const router = useRouter();
 
   function generateQuestion(correct) {
     const wrong = getRandomItems(countries, 3, correct.name);
@@ -48,6 +61,7 @@ function AllCountiresGame({ region = "allRegions", limit = "ِAll" }) {
     });
   }
 
+  // Handle the shuffling questions useEffect
   useEffect(() => {
     let filteredCountries = countriesData;
     if (region !== "allRegions") {
@@ -61,14 +75,17 @@ function AllCountiresGame({ region = "allRegions", limit = "ِAll" }) {
 
     setCountries(limitedCountries);
     setIsLoading(false);
+    setIsGameActive(true);
   }, [region, limit]);
 
+  // Handle questions maker useEffect
   useEffect(() => {
     if (!countries.length) return;
 
     generateQuestion(countries[currentIndex]);
   }, [countries, currentIndex]);
 
+  // Handle the next country image useEffect (increasing the performance)
   useEffect(() => {
     if (countries.length > 0 && currentIndex < countries.length - 1) {
       const nextCountry = countries[currentIndex + 1];
@@ -91,6 +108,21 @@ function AllCountiresGame({ region = "allRegions", limit = "ِAll" }) {
     }
   }, [currentIndex, countries]);
 
+  // Handle the timer useEffect
+  useEffect(() => {
+    let timerInterval;
+
+    if (isGameActive) {
+      timerInterval = setInterval(() => {
+        setTime((prevTime) => prevTime + 1);
+      }, 1000);
+    } else {
+      clearInterval(timerInterval);
+    }
+
+    return () => clearInterval(timerInterval);
+  }, [isGameActive]);
+
   function handleNextQuestion() {
     if (!selectedAnswer) {
       return;
@@ -102,7 +134,7 @@ function AllCountiresGame({ region = "allRegions", limit = "ِAll" }) {
     } else {
       sessionStorage.setItem("scoreNow", score);
       sessionStorage.setItem("totalNow", countries.length);
-      sessionStorage.setItem("highStreakNow", Math.max(streaks))
+      sessionStorage.setItem("highStreakNow", Math.max(streaks));
       router.push(`/AllCountiresGame/EndingScreen`);
     }
   }
@@ -114,7 +146,7 @@ function AllCountiresGame({ region = "allRegions", limit = "ِAll" }) {
       setScore((prev) => prev + 1);
       setStreak((prev) => prev + 1);
     } else {
-      streaks.push(streak)
+      streaks.push(streak);
       setStreak(0);
     }
   }
@@ -127,23 +159,25 @@ function AllCountiresGame({ region = "allRegions", limit = "ِAll" }) {
 
       <div className={styles.page}>
         <>
-          <ProgressBar currentIndex={currentIndex} totalQuestions={countries.length} streak={streak}/>
           <QuestionCard
             img={question?.img}
-            number={currentIndex + 1}
             options={question?.options || []}
             correctAnswer={question?.correct}
             selectedAnswer={selectedAnswer}
             isAnswered={isAnswered}
             onAnswer={handleSelectAnswer}
+            currentIndex={currentIndex}
+            totalQuestions={countries.length}
+            streak={streak}
+            totalSeconds={Number(time)}
           />
-          <div style={{ display: "flex", gap: "10px"}}>
+          <div style={{ display: "flex", gap: "10px" }}>
             <NextQuestionButton
               nextQuestionButton={styles.nextQuestionButton}
               onClick={handleNextQuestion}
               lastQuestion={currentIndex === countries.length - 1}
             />
-            <ReturnButton href={""}/>
+            <ReturnButton href={""} />
           </div>
         </>
       </div>

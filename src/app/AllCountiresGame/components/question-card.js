@@ -1,14 +1,19 @@
 import styles from "../page.module.css";
+import ProgressBar from './progress-bar'
+import Timer from "./timer";
 import { useTranslation } from "react-i18next";
 
 function QuestionCard({
   img,
   options,
-  number,
   correctAnswer,
   selectedAnswer,
   isAnswered,
   onAnswer,
+  currentIndex,
+  totalQuestions,
+  streak,
+  totalSeconds,
 }) {
   const { t, i18n } = useTranslation();
   const dir = i18n.language
@@ -28,7 +33,11 @@ function QuestionCard({
 
   return (
     <div className={styles.card}>
-      <h2 dir={dir === "ar" ? "rtl" : "ltr"}>{number}. {t("gamePage.question")}</h2>
+      <div style={{display: streak > 2 ? "block" : "none"}} dir={dir === "ar" ? "rtl" : "ltr"}>{`${t("gamePage.streak")} ${streak}🔥`}</div>
+      <div className={styles.quizInformations}>
+        <ProgressBar currentIndex={currentIndex} totalQuestions={totalQuestions} streak={streak}/>
+        <Timer totalSeconds={totalSeconds}/>
+      </div>
       <img src={img.src} alt={img.alt} />
       {options.map((opt) => (
         <button
