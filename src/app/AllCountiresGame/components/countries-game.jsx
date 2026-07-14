@@ -28,12 +28,9 @@ function AllCountiresGame({ region = "allRegions", limit = "ِAll" }) {
   const [isAnswered, setIsAnswered] = useState(false);
   const [score, setScore] = useState(0);
   const [streak, setStreak] = useState(0);
-  const [highStreak, setHighStreak] = useState(0)
+  const [highStreak, setHighStreak] = useState(0);
   const [time, setTime] = useState(0);
   const [isGameActive, setIsGameActive] = useState(false);
-  // const [bestTime, setBestTime] = useState(
-  //   localStorage.getItem("bestTime") ? parseInt(savedBestTime) : null,
-  // );
 
   const router = useRouter();
 
@@ -127,8 +124,8 @@ function AllCountiresGame({ region = "allRegions", limit = "ِAll" }) {
       sessionStorage.setItem("scoreNow", score);
       sessionStorage.setItem("totalNow", countries.length);
       sessionStorage.setItem("highStreakNow", highStreak);
-      sessionStorage.setItem("timeInMinute", Math.floor(time / 60))
-      sessionStorage.setItem("timeInSecond", Math.floor(time % 60))
+      sessionStorage.setItem("timeInMinute", Math.floor(time / 60));
+      sessionStorage.setItem("timeInSecond", Math.floor(time % 60));
       router.push(`/AllCountiresGame/EndingScreen`);
     }
   }
@@ -138,44 +135,44 @@ function AllCountiresGame({ region = "allRegions", limit = "ِAll" }) {
     setIsAnswered(true);
     if (option.name === question.correct) {
       setScore((prev) => prev + 1);
-      setStreak((prev) => prev + 1);
-      setHighStreak((prevHighStreak) => (Math.max(prevHighStreak, streak)))
+      const newStreak = streak + 1
+      setStreak(newStreak);
+      const newHighStreak = Math.max(highStreak, newStreak)
+      setHighStreak(newHighStreak);
     } else {
       setStreak(0);
+    }
+    if (currentIndex === countries.length - 1) {
+      setIsGameActive(false);
     }
   }
 
   if (isLoading || !question) return <p>Loading...</p>;
 
   return (
-    <>
+    <div className={styles.page}>
       <Header score={score} />
-
-      <div className={styles.page}>
-        <>
-          <QuestionCard
-            img={question?.img}
-            options={question?.options || []}
-            correctAnswer={question?.correct}
-            selectedAnswer={selectedAnswer}
-            isAnswered={isAnswered}
-            onAnswer={handleSelectAnswer}
-            currentIndex={currentIndex}
-            totalQuestions={countries.length}
-            streak={streak}
-            totalSeconds={Number(time)}
-          />
-          <div style={{ display: "flex", gap: "10px" }}>
-            <NextQuestionButton
-              nextQuestionButton={styles.nextQuestionButton}
-              onClick={handleNextQuestion}
-              lastQuestion={currentIndex === countries.length - 1}
-            />
-            <ReturnButton href={""} />
-          </div>
-        </>
+      <QuestionCard
+        img={question?.img}
+        options={question?.options || []}
+        correctAnswer={question?.correct}
+        selectedAnswer={selectedAnswer}
+        isAnswered={isAnswered}
+        onAnswer={handleSelectAnswer}
+        currentIndex={currentIndex}
+        totalQuestions={countries.length}
+        streak={streak}
+        totalSeconds={Number(time)}
+      />
+      <div style={{ display: "flex", gap: "10px" }}>
+        <NextQuestionButton
+          nextQuestionButton={styles.nextQuestionButton}
+          onClick={handleNextQuestion}
+          lastQuestion={currentIndex === countries.length - 1}
+        />
+        <ReturnButton href={""} />
       </div>
-    </>
+    </div>
   );
 }
 export default AllCountiresGame;

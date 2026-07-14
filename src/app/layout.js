@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
   return (
       <html lang="ar" className={poppins.variable}>
         <body>
-          <I18nProvider>{children}</I18nProvider>;
+          <I18nProvider>{children}</I18nProvider>
         </body>
       </html>
   );

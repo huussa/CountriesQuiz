@@ -31,6 +31,7 @@
     },
     "endingPage" : {
         "title" : "🎉 انتهت اللعبه",
+        "score" : "نتيجتك هي: ",
         "highStreak" : "اعلى ستريك حالي",
         "highestStreak" : "اعلى ستريك على الاطلاق",
         "timeTaken" : "الوقت المستغرق",

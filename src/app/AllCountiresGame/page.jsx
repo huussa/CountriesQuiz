@@ -47,7 +47,7 @@ function Game() {
   }
 
   if (isGameStarted) {
-    return <AllCountiresGame region={selectedRegion} limit={selectedLimit} />;
+    return <AllCountiresGame region={selectedRegion} limit={selectedLimit} />
   }
 
   return (
