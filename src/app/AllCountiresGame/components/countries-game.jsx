@@ -19,14 +19,6 @@ function shuffle(array) {
   return [...array].sort(() => Math.random() - 0.5);
 }
 
-const formatTime = (totalSeconds) => {
-  const minutes = Math.floor(totalSeconds / 60)
-    .toString()
-    .padStart(2, "0");
-  const seconds = (totalSeconds % 60).toString().padStart(2, "0");
-  return `${minutes}:${seconds}`;
-};
-
 function AllCountiresGame({ region = "allRegions", limit = "ِAll" }) {
   const [countries, setCountries] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -36,13 +28,13 @@ function AllCountiresGame({ region = "allRegions", limit = "ِAll" }) {
   const [isAnswered, setIsAnswered] = useState(false);
   const [score, setScore] = useState(0);
   const [streak, setStreak] = useState(0);
+  const [highStreak, setHighStreak] = useState(0)
   const [time, setTime] = useState(0);
   const [isGameActive, setIsGameActive] = useState(false);
   // const [bestTime, setBestTime] = useState(
   //   localStorage.getItem("bestTime") ? parseInt(savedBestTime) : null,
   // );
 
-  const streaks = [];
   const router = useRouter();
 
   function generateQuestion(correct) {
@@ -134,8 +126,9 @@ function AllCountiresGame({ region = "allRegions", limit = "ِAll" }) {
     } else {
       sessionStorage.setItem("scoreNow", score);
       sessionStorage.setItem("totalNow", countries.length);
-      sessionStorage.setItem("highStreakNow", Math.max(streaks));
-      setIsGameActive(false);
+      sessionStorage.setItem("highStreakNow", highStreak);
+      sessionStorage.setItem("timeInMinute", Math.floor(time / 60))
+      sessionStorage.setItem("timeInSecond", Math.floor(time % 60))
       router.push(`/AllCountiresGame/EndingScreen`);
     }
   }
@@ -146,8 +139,8 @@ function AllCountiresGame({ region = "allRegions", limit = "ِAll" }) {
     if (option.name === question.correct) {
       setScore((prev) => prev + 1);
       setStreak((prev) => prev + 1);
+      setHighStreak((prevHighStreak) => (Math.max(prevHighStreak, streak)))
     } else {
-      streaks.push(streak);
       setStreak(0);
     }
   }

@@ -30,8 +30,12 @@
         "streak" : "الستريك: "
     },
     "endingPage" : {
-        "title" : "انتهت اللعبه",
-        "score" : "نتيجتك هي: "
+        "title" : "🎉 انتهت اللعبه",
+        "highStreak" : "اعلى ستريك حالي",
+        "highestStreak" : "اعلى ستريك على الاطلاق",
+        "timeTaken" : "الوقت المستغرق",
+        "bestTime" : "اسرع وقت"
+
     },
     "buttons" : {
         "startGame" : "🚀 ابدء اللعبه",

@@ -30,8 +30,11 @@
         "streak" : "Streak: "
     },
     "endingPage" : {
-        "title" : "Game Over",
-        "score" : "Your Score: "
+        "title" : "Game Over 🎉",
+        "highStreak" : "HIGH STREAK",
+        "highestStreak" : "HIGHEST STREAK",
+        "timeTaken" : "TIME TAKEN",
+        "bestTime" : "BEST TIME"
     },
     "buttons" : {
         "startGame" : "🚀 Start Game",
