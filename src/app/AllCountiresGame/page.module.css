@@ -80,9 +80,9 @@
   border-radius: 10px;
 }
 
-.card h2 {
-  margin-bottom: 1.5rem;
+.card .streak {
   font-size: 1.5rem;
+  font-weight: bold;
   color: #fff;
 }
 .card .buttons {
@@ -159,6 +159,7 @@
   color: #667eea;
   border: 1px solid #667eea;
   border-radius: 10px;
+  font-weight: bold;
 }
 /* Progress Bar */
 .progressBar {
@@ -196,7 +197,7 @@
   align-items: center;
   justify-content: center;
   color: #ffffff;
-  font-size: 14px;
+  font-size: 20px;
   font-weight: bold;
   z-index: 1;
   text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
@@ -440,6 +441,14 @@
   .switchingButton {
     padding: 0.3rem 0.8rem;
     font-size: 0.9rem;
+  }
+  .card .streak {
+    font-size: 15px;
+  }
+  .card img {
+    max-height: 120px;
+    width: auto;
+    margin: 0 auto 1rem auto;
   }
   .timer {
     padding: 0.3rem 1rem;
