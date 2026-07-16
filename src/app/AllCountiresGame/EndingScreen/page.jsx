@@ -112,7 +112,7 @@ function EndingScreen() {
   const percentage = total > 0 ? (score / total) * 100 : 0;
 
   function ConfettiFireworks() {
-    const duration = 10 * 1000;
+    const duration = 5 * 1000;
     const animationEnd = Date.now() + duration;
     const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
 
@@ -130,6 +130,11 @@ function EndingScreen() {
         ...defaults,
         particleCount,
         origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 },
+      });
+      confetti({
+        ...defaults,
+        particleCount,
+        origin: { x: randomInRange(0.4, 0.6), y: Math.random() - 0.2 },
       });
       confetti({
         ...defaults,
