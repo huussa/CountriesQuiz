@@ -31,6 +31,7 @@
     },
     "endingPage" : {
         "title" : "Game Over 🎉",
+        "newRecord" : "NEW RECORD! 🏆",
         "score" : "Your Score: ",
         "highStreak" : "HIGH STREAK",
         "highestStreak" : "HIGHEST STREAK",

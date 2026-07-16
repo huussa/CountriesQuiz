@@ -9,12 +9,14 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "canvas-confetti": "^1.9.4",
     "i18next": "^26.3.6",
     "next": "^16.2.7",
     "react": "^19.2.4",
     "react-confetti": "^6.4.0",
     "react-dom": "19.2.4",
-    "react-i18next": "^17.0.9"
+    "react-i18next": "^17.0.9",
+    "react-use": "^17.6.1"
   },
   "devDependencies": {
     "eslint": "^9",

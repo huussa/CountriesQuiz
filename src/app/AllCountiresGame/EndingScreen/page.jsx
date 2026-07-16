@@ -7,16 +7,22 @@ import ReturnButton from "../components/return-button";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { useTranslation } from "react-i18next";
+import { useWindowSize } from "react-use";
+import confetti from "canvas-confetti";
 
 function EndingScreen() {
   const router = useRouter();
   const { t } = useTranslation();
+  const { width, height } = useWindowSize();
   const [score, setScore] = useState(0);
   const [total, setTotal] = useState(0);
   const [highStreak, sethighStreak] = useState(0);
   const [time, setTime] = useState({ minutes: 0, seconds: 0 });
   const [highestStreak, setHighestStreak] = useState(0);
   const [bestTime, setBestTime] = useState({ minutes: 0, seconds: 0 });
+  const [isNewStreakRecord, setIsNewStreakRecord] = useState(false);
+  const [isNewBestTime, setIsNewBestTime] = useState(false);
+  const [isNewBestScore, setIsNewBestScore] = useState(false);
 
   useEffect(() => {
     // 1. Get the current values from the finished game
@@ -45,14 +51,24 @@ function EndingScreen() {
     sethighStreak(currentStreak);
     setTime({ minutes: currentMin, seconds: currentSec });
 
+    // 1. Best Score
+    const rawBestScore = sessionStorage.getItem("bestScore");
+    let bestScore = rawBestScore ? parseInt(rawBestScore, 10) : 0;
+    if (currentScore >= bestScore){
+      bestScore = currentScore;
+      sessionStorage.setItem("bestScore", bestScore.toString())
+      setIsNewBestScore(true)
+    }
+
     // 2. Highest Streak Logic
     const rawHighestStreak = sessionStorage.getItem("highestStreak");
     let bestStreak = rawHighestStreak ? parseInt(rawHighestStreak, 10) : 0;
 
     // Compare local variables to check for a new record
-    if (currentStreak > bestStreak) {
+    if (currentStreak >= bestStreak) {
       bestStreak = currentStreak; // The player broke their record
       sessionStorage.setItem("highestStreak", bestStreak.toString()); // Save new record
+      setIsNewStreakRecord(true);
     }
     setHighestStreak(bestStreak); // Update the UI state
 
@@ -68,13 +84,14 @@ function EndingScreen() {
       const previousBestSec = parseInt(rawBestSec, 10);
 
       // Convert time to seconds to make the math comparison easier
-      const currentTimeInSeconds = (currentMin * 60) + currentSec;
-      const previousBestInSeconds = (previousBestMin * 60) + previousBestSec;
+      const currentTimeInSeconds = currentMin * 60 + currentSec;
+      const previousBestInSeconds = previousBestMin * 60 + previousBestSec;
 
       // Assuming lower time is better (if higher is better, change < to >)
-      if (currentTimeInSeconds < previousBestInSeconds) {
+      if (currentTimeInSeconds <= previousBestInSeconds) {
         sessionStorage.setItem("bestTimeInMinute", currentMin.toString());
         sessionStorage.setItem("bestTimeInSecond", currentSec.toString());
+        setIsNewBestTime(true);
       } else {
         // Record not broken, keep the previous best time for the UI
         bestMin = previousBestMin;
@@ -85,23 +102,54 @@ function EndingScreen() {
       sessionStorage.setItem("bestTimeInMinute", currentMin.toString());
       sessionStorage.setItem("bestTimeInSecond", currentSec.toString());
     }
-    
+
     // Update the UI with the best time
     setBestTime({ minutes: bestMin, seconds: bestSec });
-
   }, [router]);
 
   const formattedTime = (time) =>
     `${time.minutes.toString().padStart(2, "0")}:${time.seconds.toString().padStart(2, "0")}`;
   const percentage = total > 0 ? (score / total) * 100 : 0;
 
+  function ConfettiFireworks() {
+    const duration = 10 * 1000;
+    const animationEnd = Date.now() + duration;
+    const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
+
+    const randomInRange = (min, max) => Math.random() * (max - min) + min;
+
+    const interval = window.setInterval(() => {
+      const timeLeft = animationEnd - Date.now();
+
+      if (timeLeft <= 0) {
+        return clearInterval(interval);
+      }
+
+      const particleCount = 50 * (timeLeft / duration);
+      confetti({
+        ...defaults,
+        particleCount,
+        origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 },
+      });
+      confetti({
+        ...defaults,
+        particleCount,
+        origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 },
+      });
+    }, 250);
+  }
+
   return (
     <>
       <Header score={score} />
 
       <div className={styles.page}>
+        {(isNewStreakRecord || isNewBestTime || isNewBestScore) && (
+          <ConfettiFireworks></ConfettiFireworks>
+        )}
         <div className={styles.card}>
           <h2 className={styles.title}>{t("endingPage.title")}</h2>
+          <h2 className={styles.title}>{t("endingPage.newRecord")}</h2>
 
           <div className={styles.progressContainer}>
             <CircularProgressBar percentage={percentage} />
