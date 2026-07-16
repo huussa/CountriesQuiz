@@ -4,11 +4,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
   background: linear-gradient(135deg, #0f0f0f 0%, #1a1a2e 100%);
-  overflow: hidden;
+  overflow-y: auto;
   animation: moveBg 20s linear infinite;
-  padding-top: 80px;
+  padding: 100px 20px 40px;
+  box-sizing: border-box;
 }
 
 /* result card */
@@ -18,12 +19,14 @@
   align-items: center;
   text-align: center;
   flex-direction: column;
-  width: 500px;
+  width: 100%;
+  max-width: 500px;
   padding: 2.5rem;
   border-radius: 20px;
   background-color: #1e1e2e;
   border: 1px solid #2a2a3e;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
 }
 
 /* end game title */
@@ -58,7 +61,7 @@
   justify-content: space-between;
   width: 100%;
   gap: 16px;
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 .statBox {
@@ -90,14 +93,84 @@
   color: #a4b0be;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  text-align: center;
 }
 
 .actionContainer {
-  margin-top: 10px;
+  margin-top: 20px;
   width: 100%;
   display: flex;
   justify-content: center;
 }
-@media (max-width: 500px){
-    
+
+@media (max-height: 1000px) {
+  .page {
+    padding-top: 80px;
+    padding-bottom: 20px;
+  }
+  .card {
+    padding: 1.5rem;
+  }
+  .title {
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+  }
+  .statsContainer {
+    margin-top: 10px;
+    gap: 10px;
+  }
+  .statBox {
+    padding: 10px;
+  }
+  .statIcon {
+    font-size: 1.2rem;
+    margin-bottom: 0;
+  }
+}
+
+/* 2. للشاشات النحيفة والجوالات (Mobile Screens) */
+@media (max-width: 1024px) {
+  .page {
+    padding-top: 70px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .header {
+    padding: 0.75rem 5%;
+    font-size: 1.1rem;
+  }
+
+  .header .score {
+    padding: 0.4rem 1rem;
+    font-size: 0.9rem;
+  }
+  .switchingButton {
+    padding: 0.4rem 1rem;
+    font-size: 1rem;
+  }
+  .card {
+    padding: 1.5rem 1rem;
+    max-width: 400px;
+  }
+  .title {
+    font-size: 1.2rem;
+  }
+  .statsContainer {
+    gap: 8px; /* تقليل المسافة بين المربعات الإحصائية */
+  }
+  .statBox {
+    padding: 12px 8px;
+  }
+  .statIcon {
+    font-size: 1.2rem;
+  }
+  .statValue {
+    font-size: 1.1rem;
+  }
+  .statLabel {
+    font-size: 0.65rem; /* تصغير النص عشان ما ينزل سطرين ويشوه المربع */
+  }
+  .scoreText {
+    font-size: 1rem;
+  }
 }

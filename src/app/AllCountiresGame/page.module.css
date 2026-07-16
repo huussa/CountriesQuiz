@@ -274,7 +274,6 @@
 }
 
 .regionsSelectionButton:hover {
-  background: rgba(255, 255, 255, 0.1);
   transform: translateY(-3px);
 }
 
@@ -408,7 +407,19 @@
     font-size: 1rem;
   }
 
+  .header {
+    padding: 0.75rem 5%;
+    font-size: 1.1rem;
+  }
 
+  .header .score {
+    padding: 0.4rem 1rem;
+    font-size: 0.9rem;
+  }
+  .switchingButton {
+    padding: 0.4rem 1rem;
+    font-size: 1rem;
+  }
   .page {
     padding-top: 70px;
   }
