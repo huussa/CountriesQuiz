@@ -106,7 +106,7 @@ function EndingScreen() {
           <div className={styles.progressContainer}>
             <CircularProgressBar percentage={percentage} />
             <p className={styles.scoreText}>
-              {score} / {total}
+              {`${t("endingPage.score")}${score} / ${total}`}
             </p>
           </div>
 
