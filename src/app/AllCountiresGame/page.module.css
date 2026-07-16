@@ -221,23 +221,87 @@
 }
 
 /* Game settings */
-.settingsSection {
-  margin: 20px 0;
+.pageTitle {
+  color: #fff;
+  font-size: clamp(2rem, 5vw, 3.5rem); 
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  margin-top: 2rem;
   text-align: center;
 }
+
+.settingsSection {
+  width: 100%;
+  max-width: 1200px;
+  margin: 40px 0;
+  padding: 40px 20px;
+  text-align: center;
+  background: #2a2a3e;
+  border-radius: 24px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sectionTitle {
+  color: #e2e8f0;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin-bottom: 30px;
+}
+
 .settingsSection .buttons {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap; 
+  justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 15px;
 }
-.settingsSection h2 {
+
+.regionsSelectionButton {
+  padding: 1rem 2rem;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  background: transparent;
   color: #fff;
   font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-weight: 600;
 }
-.active {
+
+.regionsSelectionButton:hover {
+  background: rgba(255, 255, 255, 0.1);
   transform: translateY(-3px);
+}
+
+.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-color: #a3bffa;
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.5);
+  transform: translateY(-3px);
+}
+
+.startButton {
+  margin-top: 10px;
+  padding: 1.2rem 5rem;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+  letter-spacing: 1px;
+}
+
+.startButton:hover {
+  transform: translateY(-4px) scale(1.02);
   box-shadow: 0 10px 25px rgba(102, 126, 234, 0.6);
+}
+
+.startButton:active {
+  transform: translateY(-1px) scale(1);
 }
 
 /* Media Queries */

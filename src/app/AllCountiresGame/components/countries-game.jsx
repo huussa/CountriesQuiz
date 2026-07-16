@@ -19,7 +19,7 @@ function shuffle(array) {
   return [...array].sort(() => Math.random() - 0.5);
 }
 
-function AllCountiresGame({ region = "allRegions", limit = "ِAll" }) {
+function AllCountiresGame({ region = "allRegions" }) {
   const [countries, setCountries] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [question, setQuestion] = useState(null);
@@ -59,13 +59,10 @@ function AllCountiresGame({ region = "allRegions", limit = "ِAll" }) {
 
     const shuffledCountries = shuffle(filteredCountries);
 
-    const limitedCountries =
-      limit === "All" ? shuffledCountries : shuffledCountries.slice(0, limit);
-
-    setCountries(limitedCountries);
+    setCountries(shuffledCountries);
     setIsLoading(false);
     setIsGameActive(true);
-  }, [region, limit]);
+  }, [region]);
 
   // Handle questions maker useEffect
   useEffect(() => {
@@ -126,6 +123,7 @@ function AllCountiresGame({ region = "allRegions", limit = "ِAll" }) {
       sessionStorage.setItem("highStreakNow", highStreak);
       sessionStorage.setItem("timeInMinute", Math.floor(time / 60));
       sessionStorage.setItem("timeInSecond", Math.floor(time % 60));
+      sessionStorage.setItem("playedRegion", region);
       router.push(`/AllCountiresGame/EndingScreen`);
     }
   }
