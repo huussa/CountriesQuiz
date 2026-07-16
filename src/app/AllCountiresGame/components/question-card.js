@@ -39,6 +39,7 @@ function QuestionCard({
         <Timer totalSeconds={totalSeconds}/>
       </div>
       <img src={img.src} alt={img.alt} />
+      <div className={styles.buttons}>
       {options.map((opt) => (
         <button
           key={opt.code}
@@ -48,6 +49,7 @@ function QuestionCard({
           {getCountryName(opt)}
         </button>
       ))}
+      </div>
     </div>
   );
 }

@@ -64,6 +64,7 @@
   align-items: center;
   text-align: center;
   flex-direction: column;
+  flex-wrap: wrap;
   width: 500px;
   padding: 2.5rem;
   border-radius: 20px;
@@ -84,6 +85,10 @@
   font-size: 1.5rem;
   color: #fff;
 }
+.card .buttons {
+  width: 100%;
+  flex-wrap: wrap;
+}
 
 .card button {
   width: 100%;
@@ -93,7 +98,7 @@
   border-radius: 10px;
   background-color: #2a2a3e;
   color: #fff;
-  font-size: 1.2rem;
+  font-size: 2rem;
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -223,7 +228,7 @@
 /* Game settings */
 .pageTitle {
   color: #fff;
-  font-size: clamp(2rem, 5vw, 3.5rem); 
+  font-size: clamp(2rem, 5vw, 3.5rem);
   text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   margin-top: 2rem;
   text-align: center;
@@ -250,7 +255,7 @@
 
 .settingsSection .buttons {
   display: flex;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 15px;
@@ -305,8 +310,81 @@
 }
 
 /* Media Queries */
-@media (max-height: 1024){
+@media (max-height: 1000px) {
+  .page {
+    height: auto;
+    min-height: 100vh;
+    overflow-y: auto;
+    justify-content: center; 
+    padding-top: 100px;
+    padding-bottom: 40px;
+  }
 
+  .card {
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .card img {
+    max-height: 180px;
+    width: auto;
+    margin: 0 auto 1rem auto;
+  }
+
+  .card h2 {
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+  }
+  .card .buttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .card button {
+    padding: 0.8rem;
+    font-size: 1.5rem;
+    margin-bottom: 0; 
+
+    width: calc(50% - 5px);
+  }
+
+  .pageTitle {
+    margin-top: 1rem;
+  }
+
+  .settingsSection {
+    margin: 20px 0;
+    padding: 25px 15px;
+  }
+
+  .sectionTitle {
+    margin-bottom: 20px;
+  }
+
+  .regionsSelectionButton {
+    padding: 0.8rem 1.5rem;
+    font-size: 1.2rem;
+  }
+
+  .startButton {
+    padding: 1rem 4rem;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+  }
+
+  .progressWrapper {
+    width: 150px;
+    height: 150px;
+  }
+
+  .progressInnerCircle {
+    width: 80px;
+    height: 80px;
+    font-size: 24px;
+  }
 }
 @media (max-width: 1024px) {
   .card {
@@ -315,12 +393,8 @@
     padding: 1.5rem;
   }
 
-  .card h2 {
-    font-size: 1.2rem;
-  }
-
   .card button {
-    font-size: 1rem;
+    font-size: 1.5rem;
     padding: 0.75rem;
   }
   .settingsSection .buttons {
@@ -334,19 +408,7 @@
     font-size: 1rem;
   }
 
-  .header {
-    padding: 0.75rem 5%;
-    font-size: 1.1rem;
-  }
 
-  .header .score {
-    padding: 0.4rem 1rem;
-    font-size: 0.9rem;
-  }
-  .switchingButton {
-    padding: 0.4rem 1rem;
-    font-size: 1rem;
-  }
   .page {
     padding-top: 70px;
   }
@@ -368,8 +430,12 @@
     padding: 0.3rem 0.8rem;
     font-size: 0.9rem;
   }
+  .timer {
+    padding: 0.3rem 1rem;
+  }
   .progressBar {
-    width: 90%;
+    width: 200px;
+    height: 2.4rem;
   }
   .progressWrapper {
     width: 150px;
@@ -393,9 +459,8 @@
   }
 
   .card button {
-    font-size: 0.9rem;
+    font-size: 1rem;
     padding: 0.6rem;
-    margin-bottom: 0.5rem;
   }
 
   .card img {
