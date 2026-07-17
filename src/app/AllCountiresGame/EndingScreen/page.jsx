@@ -16,6 +16,7 @@ function EndingScreen() {
 
   useEffect(() => {
     newScoreSound.current = new Audio("/sounds/new-score.mp3");
+    newScoreSound.current.preload = "auto";
   }, []);
 
   const [score, setScore] = useState(0);
