@@ -7,20 +7,17 @@ import ReturnButton from "../components/return-button";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { useTranslation } from "react-i18next";
-import { useWindowSize } from "react-use";
 import confetti from "canvas-confetti";
 
 function EndingScreen() {
   const router = useRouter();
   const { t } = useTranslation();
-  const { width, height } = useWindowSize();
   
   const [score, setScore] = useState(0);
   const [total, setTotal] = useState(0);
   const [highStreak, sethighStreak] = useState(0);
   const [time, setTime] = useState({ minutes: 0, seconds: 0 });
   
-  const [bestScore, setBestScore] = useState(0);
   const [highestStreak, setHighestStreak] = useState(0);
   const [bestTime, setBestTime] = useState({ minutes: 0, seconds: 0 });
   
