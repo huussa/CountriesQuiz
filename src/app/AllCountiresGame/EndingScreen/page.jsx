@@ -137,6 +137,7 @@ function EndingScreen() {
     if (isNewStreakRecord || isNewBestTime || isNewBestScore) {
       fireConfetti();
       if (newScoreSound.current) {
+        newScoreSound.current.currentTime = 0;
         newScoreSound.current.play();
       }
     }
