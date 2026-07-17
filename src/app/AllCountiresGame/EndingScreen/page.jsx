@@ -4,7 +4,7 @@ import styles from "./page.module.css";
 import Header from "../components/header";
 import CircularProgressBar from "../components/circular-progress-bar";
 import ReturnButton from "../components/return-button";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { useTranslation } from "react-i18next";
 import confetti from "canvas-confetti";
@@ -12,12 +12,7 @@ import confetti from "canvas-confetti";
 function EndingScreen() {
   const router = useRouter();
   const { t } = useTranslation();
-  const newScoreSound = useRef(null);
-
-  useEffect(() => {
-    newScoreSound.current = new Audio("/sounds/new-score.mp3");
-    newScoreSound.current.preload = "auto";
-  }, []);
+  const newScoreSound = new Audio("/sounds/new-score.mp3");
 
   const [score, setScore] = useState(0);
   const [total, setTotal] = useState(0);
@@ -137,10 +132,7 @@ function EndingScreen() {
   useEffect(() => {
     if (isNewStreakRecord || isNewBestTime || isNewBestScore) {
       fireConfetti();
-      if (newScoreSound.current) {
-        newScoreSound.current.currentTime = 0;
-        newScoreSound.current.play();
-      }
+      newScoreSound.play()
     }
   }, [isNewStreakRecord, isNewBestTime, isNewBestScore]);
 
