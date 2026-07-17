@@ -8,11 +8,13 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { useTranslation } from "react-i18next";
 import confetti from "canvas-confetti";
+import useSound from "use-sound";
 
 function EndingScreen() {
   const router = useRouter();
   const { t } = useTranslation();
-  const newScoreSound = new Audio("/sounds/new-score.mp3");
+  const [playNewRecordSound] = useSound("/sounds/new-score.mp3")
+  
 
   const [score, setScore] = useState(0);
   const [total, setTotal] = useState(0);
@@ -132,6 +134,7 @@ function EndingScreen() {
   useEffect(() => {
     if (isNewStreakRecord || isNewBestTime || isNewBestScore) {
       fireConfetti();
+      const newScoreSound = new Audio("/sounds/new-score.mp3");
       newScoreSound.play()
     }
   }, [isNewStreakRecord, isNewBestTime, isNewBestScore]);
@@ -153,8 +156,8 @@ function EndingScreen() {
             <h2 className={styles.title} style={{ color: "#FFD700" }}>
               {t("endingPage.newRecord")}
             </h2>
-          )}
-
+          ) && (playNewRecordSound())}
+          
           <div className={styles.progressContainer}>
             <CircularProgressBar percentage={percentage} />
             <p className={styles.scoreText}>
