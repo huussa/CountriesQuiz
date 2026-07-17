@@ -16,7 +16,8 @@
     "react-confetti": "^6.4.0",
     "react-dom": "19.2.4",
     "react-i18next": "^17.0.9",
-    "react-use": "^17.6.1"
+    "react-use": "^17.6.1",
+    "use-sound": "^5.0.0"
   },
   "devDependencies": {
     "eslint": "^9",

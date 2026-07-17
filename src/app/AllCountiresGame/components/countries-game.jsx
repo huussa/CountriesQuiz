@@ -8,6 +8,7 @@ import ReturnButton from "./return-button";
 import countriesData from "../../data/countries.json";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import useSound from "use-sound";
 
 function getRandomItems(array, count, exclude = null) {
   const filtered = array.filter((item) => item.name !== exclude);
@@ -35,6 +36,9 @@ function AllCountiresGame({ region = "allRegions" }) {
   const [isShaking, setIsShaking] = useState(false);
 
   const router = useRouter();
+
+  const [playCorrect] = useSound("/sounds/right-answer.mp3");
+  const [playWrong] = useSound("/sounds/wrong-answer.mp3");
 
   function generateQuestion(correct) {
     const wrong = getRandomItems(countries, 3, correct.name);
@@ -134,16 +138,14 @@ function AllCountiresGame({ region = "allRegions" }) {
     setSelectedAnswer(option);
     setIsAnswered(true);
     if (option.name === question.correct) {
-      const audio = new Audio("/sounds/right-answer.mp3");
-      audio.play();
+      playCorrect()
       setScore((prev) => prev + 1);
       const newStreak = streak + 1;
       setStreak(newStreak);
       const newHighStreak = Math.max(highStreak, newStreak);
       setHighStreak(newHighStreak);
     } else {
-      const audio = new Audio("/sounds/wrong-answer.mp3");
-      audio.play();
+      playWrong()
       setStreak(0);
       setIsShaking(true);
       setTimeout(() => {

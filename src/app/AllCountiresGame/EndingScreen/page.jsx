@@ -4,7 +4,7 @@ import styles from "./page.module.css";
 import Header from "../components/header";
 import CircularProgressBar from "../components/circular-progress-bar";
 import ReturnButton from "../components/return-button";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { useRouter } from "next/navigation";
 import { useTranslation } from "react-i18next";
 import confetti from "canvas-confetti";
@@ -12,16 +12,21 @@ import confetti from "canvas-confetti";
 function EndingScreen() {
   const router = useRouter();
   const { t } = useTranslation();
-  
+  const newScoreSound = useRef(null);
+
+  useEffect(() => {
+    newScoreSound.current = new Audio("/sounds/new-score.mp3");
+  }, []);
+
   const [score, setScore] = useState(0);
   const [total, setTotal] = useState(0);
   const [highStreak, sethighStreak] = useState(0);
   const [time, setTime] = useState({ minutes: 0, seconds: 0 });
-  
+
   const [bestScore, setBestScore] = useState(0);
   const [highestStreak, setHighestStreak] = useState(0);
   const [bestTime, setBestTime] = useState({ minutes: 0, seconds: 0 });
-  
+
   const [isNewStreakRecord, setIsNewStreakRecord] = useState(false);
   const [isNewBestTime, setIsNewBestTime] = useState(false);
   const [isNewBestScore, setIsNewBestScore] = useState(false);
@@ -55,12 +60,12 @@ function EndingScreen() {
     // --- Region-based High Scores (Local Storage) ---
     const savedRecordsString = localStorage.getItem("flagGameRecords");
     let allRecords = savedRecordsString ? JSON.parse(savedRecordsString) : {};
-    
+
     // Get or initialize region data
-    let regionRecords = allRecords[playedRegion] || { 
-      bestScore: 0, 
-      highestStreak: 0, 
-      bestTimeInSeconds: Infinity 
+    let regionRecords = allRecords[playedRegion] || {
+      bestScore: 0,
+      highestStreak: 0,
+      bestTimeInSeconds: Infinity,
     };
 
     // Check for new records
@@ -87,11 +92,10 @@ function EndingScreen() {
     // Update UI states
     setBestScore(regionRecords.bestScore);
     setHighestStreak(regionRecords.highestStreak);
-    
+
     const finalBestMin = Math.floor(regionRecords.bestTimeInSeconds / 60);
     const finalBestSec = regionRecords.bestTimeInSeconds % 60;
     setBestTime({ minutes: finalBestMin, seconds: finalBestSec });
-
   }, [router]);
 
   // Confetti animation logic
@@ -110,9 +114,21 @@ function EndingScreen() {
       }
 
       const particleCount = 50 * (timeLeft / duration);
-      confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 } });
-      confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.4, 0.6), y: Math.random() - 0.2 } });
-      confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 } });
+      confetti({
+        ...defaults,
+        particleCount,
+        origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 },
+      });
+      confetti({
+        ...defaults,
+        particleCount,
+        origin: { x: randomInRange(0.4, 0.6), y: Math.random() - 0.2 },
+      });
+      confetti({
+        ...defaults,
+        particleCount,
+        origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 },
+      });
     }, 250);
   };
 
@@ -120,14 +136,15 @@ function EndingScreen() {
   useEffect(() => {
     if (isNewStreakRecord || isNewBestTime || isNewBestScore) {
       fireConfetti();
-      const audio = new Audio("/sounds/new-score.mp3")
-      audio.play()
+      if (newScoreSound.current) {
+        newScoreSound.current.play();
+      }
     }
   }, [isNewStreakRecord, isNewBestTime, isNewBestScore]);
 
   const formattedTime = (timeData) =>
     `${timeData.minutes.toString().padStart(2, "0")}:${timeData.seconds.toString().padStart(2, "0")}`;
-  
+
   const percentage = total > 0 ? (score / total) * 100 : 0;
 
   return (
@@ -137,11 +154,11 @@ function EndingScreen() {
       <div className={styles.page}>
         <div className={styles.card}>
           <h2 className={styles.title}>{t("endingPage.title")}</h2>
-          
+
           {(isNewStreakRecord || isNewBestTime || isNewBestScore) && (
-             <h2 className={styles.title} style={{ color: '#FFD700' }}>
-               {t("endingPage.newRecord")}
-             </h2>
+            <h2 className={styles.title} style={{ color: "#FFD700" }}>
+              {t("endingPage.newRecord")}
+            </h2>
           )}
 
           <div className={styles.progressContainer}>
