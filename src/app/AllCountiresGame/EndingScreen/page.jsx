@@ -122,6 +122,8 @@ function EndingScreen() {
   useEffect(() => {
     if (isNewStreakRecord || isNewBestTime || isNewBestScore) {
       fireConfetti();
+      const audio = new Audio("/sounds/new-score.mp3")
+      audio.play()
     }
   }, [isNewStreakRecord, isNewBestTime, isNewBestScore]);
 

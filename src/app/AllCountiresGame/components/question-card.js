@@ -14,6 +14,7 @@ function QuestionCard({
   totalQuestions,
   streak,
   totalSeconds,
+  isShaking,
 }) {
   const { t, i18n } = useTranslation();
   const dir = i18n.language;
@@ -30,9 +31,9 @@ function QuestionCard({
     }
     return country.name;
   };
-
+  
   return (
-    <div className={styles.card}>
+    <div className={`${styles.card} transition-all duration-300 ${isShaking ? styles.shakeAnimation : ""}`}>
       <div
         style={{ display: streak > 2 ? "block" : "none" }}
         dir={dir === "ar" ? "rtl" : "ltr"}

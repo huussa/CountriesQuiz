@@ -32,6 +32,8 @@ function AllCountiresGame({ region = "allRegions" }) {
   const [time, setTime] = useState(0);
   const [isGameActive, setIsGameActive] = useState(false);
 
+  const [isShaking, setIsShaking] = useState(false);
+
   const router = useRouter();
 
   function generateQuestion(correct) {
@@ -132,13 +134,21 @@ function AllCountiresGame({ region = "allRegions" }) {
     setSelectedAnswer(option);
     setIsAnswered(true);
     if (option.name === question.correct) {
+      const audio = new Audio("/sounds/right-answer.mp3");
+      audio.play();
       setScore((prev) => prev + 1);
-      const newStreak = streak + 1
+      const newStreak = streak + 1;
       setStreak(newStreak);
-      const newHighStreak = Math.max(highStreak, newStreak)
+      const newHighStreak = Math.max(highStreak, newStreak);
       setHighStreak(newHighStreak);
     } else {
+      const audio = new Audio("/sounds/wrong-answer.mp3");
+      audio.play();
       setStreak(0);
+      setIsShaking(true);
+      setTimeout(() => {
+        setIsShaking(false);
+      }, 500);
     }
     if (currentIndex === countries.length - 1) {
       setIsGameActive(false);
@@ -161,6 +171,7 @@ function AllCountiresGame({ region = "allRegions" }) {
         totalQuestions={countries.length}
         streak={streak}
         totalSeconds={Number(time)}
+        isShaking={isShaking}
       />
       <div style={{ display: "flex", gap: "10px" }}>
         <NextQuestionButton
