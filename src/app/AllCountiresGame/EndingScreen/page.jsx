@@ -18,6 +18,7 @@ function EndingScreen() {
   const [highStreak, sethighStreak] = useState(0);
   const [time, setTime] = useState({ minutes: 0, seconds: 0 });
   
+  const [bestScore, setBestScore] = useState(0);
   const [highestStreak, setHighestStreak] = useState(0);
   const [bestTime, setBestTime] = useState({ minutes: 0, seconds: 0 });
   
